@@ -9,6 +9,8 @@ $ pwd: saber donde estamos
 $ ls : listado 
 $ ls -al : listado especifico que muestra hasta documentos ocultos  
 
+$ git config --global user.email "ejemplo@gmail.com"
+
 $ git init : Crea un repositorio 
 
 $ git add biografia.txt : Agarra un proyecto 
@@ -23,4 +25,4 @@ $ git status : Estatus del proyecto
 
 $git rm --cached texto.txt : elimina pero sigue en la memoria RAM
 
-$git config --list : configuracion para git
+$git config --list : configuracion para git hub 
