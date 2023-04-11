@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+    <h1>Calculadora en PHP</h1>
+    <h3>Ingrese 2 numeros</h3>
+    <form action="calculadora.php" method="get">
+        <p>Seleccione la operacion a realizar</p>
+            <input type="radio" name="operacion" value="suma"><label for="suma">Suma</label>
+            <input type="radio" name="operacion" value="resta"><label for="resta">Resta</label>
+            <input type="radio" name="operacion" value="multiplicacion"><label for="multiplicacion">Multiplicacion</label>
+            <input type="radio" name="operacion" value="division"><label for="division">Division</label>
+        <p>Numero 1: <input type="number" name="num1"></p>
+        <p>Numero 2: <input type="number" name="num2"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>

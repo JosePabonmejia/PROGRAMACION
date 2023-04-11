@@ -1,0 +1,85 @@
+//  JUEGO DE PIEDRA PAPEL O TIJERA
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Piedra, papel o tijera</title>
+    <script>
+    //1 es piedra
+    //2 es papel
+    //3 es tijiera
+//como crear funciones
+
+      let jugador =0//DEFINE VARIABLES
+      let pc = Math.floor(Math.random()*(3-1+1)+1 )// Formula para generar un valor random Math.floor(Math.random()*(max-min+1)+min )
+      //Math.floor = sirve para volver entero a todo valor numerico
+      //Math.random = sirve para generar un valor aleatoreo
+      jugador = prompt ("Elige= 1 para piedra, 2 para papel, 3 para tijera")//aqui entran datos para el jugador medieante un prompt
+      //alert ("Elejiste "+jugador)
+      if (jugador==1) //IF
+      {
+        alert ("Elejiste Piedra ")//MUESTRA MENSAJES
+      }
+      else
+        if (jugador==2)
+      {
+        alert ("Elejiste Papel")
+
+      }
+        else
+          if (jugador==3)
+        {
+        alert ("Elejiste tijera")
+        }
+        else
+        alert("Solo puedes escojer valores de 1 al 3 PENDEJETE")
+//para la pc
+        if (pc==1)
+        {
+          alert ("La PC eligio Piedra ")
+        }
+        else
+          if (pc==2)
+        {
+          alert ("La PC eligio  Papel")
+        }
+          else
+            if (pc==3)
+          {
+          alert ("La PC eligio  tijera")
+        }
+        //COMBATE
+        if (pc==jugador)
+        {
+          alert ("Empate")
+        }
+        else
+        if (jugador==1 && pc==3)
+         {
+           alert("GANASTE")
+         }
+        else
+        if (jugador==2 && pc==1)
+        {
+          alert("Ganaste")
+        }
+        else
+        if(jugador==3 && pc==2)
+        {
+          alert("GANASTE")
+        }
+        else
+          alert("Gana la PC")
+
+//ALGORITMO PARA GENERAR NUMEROS CON RAMDOM CON UN MINIMO Y UN MAXIMO ENTRE HASTA
+//Math.floor(quita decimales)
+//Math.random(genera un numero aleatoreo)
+//Math.floor(Math.random()*(max-min+1)+min)
+
+
+    </script>
+  </head>
+  <body>
+    <h1>Piedra Papel o Tijiera</h1>
+  </body>
+</html>

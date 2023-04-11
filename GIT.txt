@@ -1,0 +1,26 @@
+cd .. : ir a carpeta anterior 
+cat archivo.txt: mostrar rapidamente el contenido de un archivo 
+ATAJO apretar TAB luego de colocar las siglas de cualquier archivo
+history : saber todos los comandos realizados 
+si queremos regresar algun comando colocamos signo de admiracion y luego el numero de comando que quiero !40
+Borrar archivos : rm vacio.txt 
+
+$ pwd: saber donde estamos 
+$ ls : listado 
+$ ls -al : listado especifico que muestra hasta documentos ocultos  
+
+$ git init : Crea un repositorio 
+
+$ git add biografia.txt : Agarra un proyecto 
+
+$ git commit -m "version 1"
+
+$ mkdir proyecto_1 : crear carpetas 
+
+$ touch vacio.txt : crear un archivo vacio 
+
+$ git status : Estatus del proyecto 
+
+$git rm --cached texto.txt : elimina pero sigue en la memoria RAM
+
+$git config --list : configuracion para git

@@ -1,0 +1,5 @@
+COMANDOS PARA LA TERMINAL 
+ls: Para listar nuestras opciones 
+mkdir: Para crear una carpeta 
+touch: Para crear un archivo 
+cat: Para ver el contenido de un archivo 

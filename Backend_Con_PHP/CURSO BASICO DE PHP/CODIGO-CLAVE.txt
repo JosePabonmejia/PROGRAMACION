@@ -1,0 +1,28 @@
+echo "aqui va el texto";//sirve para imprimir textos 
+
+$numero_1= 8 ; //variable php pesus para guardar el 8 
+
+define("NUMERO_PI", 3.14); // definir constantes siempre deven estar en mayusculas 
+echo NUMERO_PI; // muestra el numero pi  
+
+
+echo "\n"; //Muestra resultado en la terminal
+
+var_dump($numerito); //Informacion acerca de variables 
+
+/////TIPOS DE DATOS 
+NUMERICOS= Integer:Numeros_enteros 1,2,3 Float:Punto_flotante 1.25 Double:Con_mas_decimales 3.141611220001
+
+CADENAS DE CARACTERES= Char:Agrupaciones_de_simbolos_letras @$ String:Cadena_de_caracteres angel 
+
+BOOLEANOS= Bool: verdadero_y_falso 
+
+SIN_VALOR= Null: Undefined 
+
+////COMO FORZAAR VALORES 
+<?php Forzamos el valor de 5 que es un string a integer 
+
+$numero= "5"; 
+$numero= (int) $numero;
+var_dump($numero);
+echo"\n";
