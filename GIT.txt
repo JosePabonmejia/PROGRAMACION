@@ -13,7 +13,7 @@ $ git config --global user.email "ejemplo@gmail.com"
 
 $ git init : Crea un repositorio 
 
-$ git add biografia.txt : Agrega el archivo seleccionado 
+$ git add biografia.txt o tambien git add . : Agrega el archivo seleccionado 
 
 $ git commit -m "version 1" : Hacer un commit 
 
@@ -28,3 +28,5 @@ $ git status : Estatus del proyecto
 $ git rm --cached texto.txt : elimina pero sigue en la memoria RAM
 
 $ git config --list : configuracion para git hub 
+
+$ git show historial.txt 
