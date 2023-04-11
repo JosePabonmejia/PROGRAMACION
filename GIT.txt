@@ -15,7 +15,7 @@ $ git init : Crea un repositorio
 
 $ git add biografia.txt : Agarra un proyecto 
 
-$ git commit -m "version 1"
+$ git commit -m "version 1" : Hacer un commit 
 
 $ mkdir proyecto_1 : crear carpetas 
 
@@ -23,6 +23,6 @@ $ touch vacio.txt : crear un archivo vacio
 
 $ git status : Estatus del proyecto 
 
-$git rm --cached texto.txt : elimina pero sigue en la memoria RAM
+$ git rm --cached texto.txt : elimina pero sigue en la memoria RAM
 
-$git config --list : configuracion para git hub 
+$ git config --list : configuracion para git hub 
