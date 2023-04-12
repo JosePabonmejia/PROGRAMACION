@@ -26,3 +26,4 @@ $numero= "5";
 $numero= (int) $numero;
 var_dump($numero);
 echo"\n";
+VAMO A VER SI ESTA MAMADA FUNCIONA 

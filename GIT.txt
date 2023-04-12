@@ -31,4 +31,9 @@ $ git config --list : configuracion para git hub
 
 $ git show historial.txt 
 
+$git log historial.txt para ver todos los commits
+
+$ git diff luego utilizar el comando log se extrae un codigo de commit para hacer la comparacion
+
 66aa5cd7eaafa4860e086885566247ac3d2eae72   PARA LA PRUEVA 
+57b95a590dc4c5f90e42fd6fd6c664668bc461c9
