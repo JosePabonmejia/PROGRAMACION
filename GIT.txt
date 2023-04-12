@@ -30,3 +30,5 @@ $ git rm --cached texto.txt : elimina pero sigue en la memoria RAM
 $ git config --list : configuracion para git hub 
 
 $ git show historial.txt 
+
+66aa5cd7eaafa4860e086885566247ac3d2eae72   PARA LA PRUEVA 

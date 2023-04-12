@@ -1,0 +1,29 @@
+[33mcommit 66aa5cd7eaafa4860e086885566247ac3d2eae72[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: JosePabonmejia <josefolofus@gmail.com>
+Date:   Mon Apr 10 22:31:33 2023 -0400
+
+    Git add .
+
+[1mdiff --git a/GIT.txt b/GIT.txt[m
+[1mindex b2a29a8..af87545 100644[m
+[1m--- a/GIT.txt[m
+[1m+++ b/GIT.txt[m
+[36m@@ -13,7 +13,7 @@[m [m$ git config --global user.email "ejemplo@gmail.com"[m
+ [m
+ $ git init : Crea un repositorio [m
+ [m
+[31m-$ git add biografia.txt : Agrega el archivo seleccionado [m
+[32m+[m[32m$ git add biografia.txt o tambien git add . : Agrega el archivo seleccionado[m[41m [m
+ [m
+ $ git commit -m "version 1" : Hacer un commit [m
+ [m
+[36m@@ -27,4 +27,6 @@[m [m$ git status : Estatus del proyecto[m
+ [m
+ $ git rm --cached texto.txt : elimina pero sigue en la memoria RAM[m
+ [m
+[31m-$ git config --list : configuracion para git hub [m
+\ No newline at end of file[m
+[32m+[m[32m$ git config --list : configuracion para git hub[m[41m [m
+[32m+[m
+[32m+[m[32m$ git show historial.txt[m[41m [m
+\ No newline at end of file[m
