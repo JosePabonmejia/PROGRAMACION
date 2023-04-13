@@ -3,12 +3,13 @@ echo "aqui va el texto";//sirve para imprimir textos
 $numero_1= 8 ; //variable php pesus para guardar el 8 
 
 define("NUMERO_PI", 3.14); // definir constantes siempre deven estar en mayusculas 
+
 echo NUMERO_PI; // muestra el numero pi  
 
 
-echo "\n"; //Muestra resultado en la terminal
+echo "\n"; // Salto de linea 
 
-var_dump($numerito); //Informacion acerca de variables 
+var_dump($numerito); //Muestra resultados en la terminal 
 
 /////TIPOS DE DATOS 
 NUMERICOS= Integer:Numeros_enteros 1,2,3 Float:Punto_flotante 1.25 Double:Con_mas_decimales 3.141611220001
@@ -27,3 +28,76 @@ $numero= (int) $numero;
 var_dump($numero);
 echo"\n";
 VAMO A VER SI ESTA MAMADA FUNCIONA 
+
+////Operadores Aritméticos
+Adición ⇒ +
+Sustracción ⇒ -
+Multiplicación ⇒ *
+División ⇒ /
+Modulo ⇒ % ⇒ Se usa para conocer el residuo de una división ⇒ $a % $b
+Potenciación ⇒ ** ⇒ $a ** $b
+Identidad ⇒ Sirve para convertir un string a un int o float, según sea el caso ⇒ + ⇒ +$a
+Negación ⇒ Convierte un numero positivo a negativo ⇒ -$a
+
+////OPERADORES RELACIONALES 
+//== Igual 
+//var_dump($a == $b);
+
+// === identico 
+//var_dump($a === $b2); son iguales pero no son identicos   
+
+//!=Diferente 
+//var_dump($a != $b);
+
+//!== Diferente 
+// var_dump($a !== $b);
+// var_dump($a !== $b2);
+
+//< Menor que 
+// var_dump($a < $b);
+// var_dump($c < $b);
+// var_dump($d < $b);
+
+//> Mayor que 
+// var_dump($a > $b);
+// var_dump($c > $b);
+// var_dump($d > $b);
+
+//<= Menor o igual que 
+// var_dump($a <= $b);
+// var_dump($c <= $b);
+// var_dump($d <= $b);
+
+//  <=> Operador de nave espacial si el numero que esta a la izquierda es menor que el de la derecha este regresa el valor de -1 y si es al revez este regresa 1
+// echo 1 <=> 3;
+
+// ?? Fucion de null 
+
+//$edad_pepe = 23;
+//echo $edad_juan ?? $edad_pepe; // Si la edad de juanito no esta definida usa porfavor la edad de pepe 
+//echo "\n"; 
+
+//Operador de asignacion 
+// $edad_jaime = ($edad_pepe = 18) + 5;
+
+// echo "la edad de jaime es $edad_pepe \n" ;
+// echo "La edad de pepe es $edad_jaime";
+
+//Operadores de incremento 
+
+// $contador = 1;
+
+// $contador = $contador + 1;
+// $contador += 1;
+// $contador++;
+
+//operador de
+//    +=
+//    -=
+//    *=
+//    /=
+
+//Concatenacion 
+// $nombre = "carlos";
+// $nombre =$nombre . ""."Santana";
+// echo $nombre;
