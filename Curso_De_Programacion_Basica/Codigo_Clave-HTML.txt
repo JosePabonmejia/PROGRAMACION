@@ -1,0 +1,22 @@
+///HTML 
+
+ESTRUCTURA BASICA DE HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">// EXTENCION PARA NAVEGADORES VIEJOS 
+
+  <script src="js/Archivo.js"></script>// Llama al archivo de Java script de la misma carpeta donde estamos progtamando 
+
+  <title> TITULO </title> //TITULO DEL PROGRAMA
+</head>
+<body>
+    CUERPO DEL HTML TODO LO QUE SE VE   
+</body>
+</html>
+
+
+//// OCULTAR ELEMENTOS EN HTML
+       

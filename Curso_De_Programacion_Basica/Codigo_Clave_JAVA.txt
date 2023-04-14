@@ -1,0 +1,43 @@
+///PARA CREAR UNA FUNCION
+
+ function iniciar() //Funcion iniciar (convocamos la funcion)
+    {
+
+    }
+ 
+  function aleatoreo(min,max)
+{
+   return Math.floor(Math.random()*(max-min+1)+min) //al llamar debemos definir el maximo y el minimo "let aleatoreo = aleatoreo(1,3)"
+}
+   Math.floor(convierte todo valor a entero)
+
+///DEFINIR UNA VARIABLE 
+                                      variable que llama un boton "document.getElementById('')"
+   let variable = 1         let btnReiniciar = document.getElementById('btn-reiniciar')
+
+///EVENTOS Click etc  btnReiniciar.addEventListener('evento',FUNCION)
+ Evento para iniciar todo el programa IMPORTANTE window.addEventListener('load', funcioniniciarprograma)
+
+Primero definimos la variable de entrada HTML 
+
+                      btnReiniciar.addEventListener('click',Reiniciar)
+
+///IMPUTS 
+Primero definimos las variables para los imputs con un let ej: let imputNombre = document.getElementById('Nombre')
+
+let 
+
+///MENSAGES MENSAGES 
+
+alert ('Ejemplo')
+spanHTML.innerHTML = 'Ejemplo'
+
+/// 
+
+//// METODO PARA REINICIAR 
+       location.reload()// Reinicia todo en la bentana actual 
+
+/// METODO PARA OCULTAR Y MOSTRAR SECCIONES EN HTML style.display = 'none'(Ocultar) 'block'(mostrar)
+
+let SectionSelecionUsuario= document.getElementById(Selecionar-Usuario)
+        SectionSelecionUsuario.style.display
