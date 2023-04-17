@@ -30,7 +30,7 @@ let vidasenemigo = 3
 
 
       }
-         function seleccionmokepon()
+    function seleccionmokepon()
          {
         //Metodo para mosrtar seccion ataque    
         let sectionSelecionarAtaque= document.getElementById('Selecionar-ataque')
@@ -51,13 +51,13 @@ let vidasenemigo = 3
          //EN ESTA PARTE DEBEMOS SABER CUAL DE LOS IMPUTS FUE SELECIONADA CON EL COMANDO document.getElementById CHECK
                 if (inputscuartle.checked)//Selecciona el Imput con id scuartle en el HTML y lo revisa Checked
                 {
-                  alert ('Seleccionaste a SCUARTLE')
-                  spanmokepon.innerHTML = 'SCUARTLE'
+                  alert ('Seleccionaste a SQUIRTLE')
+                  spanmokepon.innerHTML = 'SQUIRTLE'
                 }
                 else if (inputchicorita.checked)
                 {
-                  alert ('Seleccionaste a CHICORITA')
-                  spanmokepon.innerHTML = 'CHICORITA'
+                  alert ('Seleccionaste a BULBASUR')
+                  spanmokepon.innerHTML = 'BULBASUR'
                 }
                 else if (inputcharmander.checked)
                 {
@@ -83,7 +83,7 @@ let vidasenemigo = 3
                 {
                 alert ('Debes Seleccinar a un mokepon')
                 }
-              let ini = seleccionmokeponenemigo()
+               seleccionmokeponenemigo()
 
         }
         //FUNCION PARA SELECCION DEL ENEMIGO
@@ -94,13 +94,13 @@ let vidasenemigo = 3
 
                 if (mokeponaleatoreo==1)
                 {
-                    alert ('El contringante escogio a SCUARTLE')
-                  spanmokeponene.innerHTML = ' SCUARTLE'
+                    alert ('El contringante escogio a SQUIRTLE')
+                  spanmokeponene.innerHTML = ' SQUIRTLE'
                 }
                 else if (mokeponaleatoreo==2)
                 {
-                      alert ('El contringante escogio a CHICORITA')
-                  spanmokeponene.innerHTML = ' CHICORITA'
+                      alert ('El contringante escogio a BULBASUR')
+                  spanmokeponene.innerHTML = ' BULBASUR'
                 }
                 else if (mokeponaleatoreo==3)
                 {
@@ -123,7 +123,7 @@ let vidasenemigo = 3
                   spanmokeponene.innerHTML = 'PIKACHU'
                 }
               }
-        function ataquefuego(){
+function ataquefuego(){
          ataquejugador = 'FUEGO'//DEFINIDAS COMO VARIABLES GOLBALES   
         ataquealeatoreoENE()
         }

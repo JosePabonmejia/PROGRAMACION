@@ -1,0 +1,17 @@
+///CSS DISPLAY 
+Tipos de visualizacion 
+Block = toda la pantalla
+Lnline = un pedazo nada mas 
+
+///FLEZBOX
+Herramietas para alinear cosas 
+#Selecionar-pokemon {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+///MODELO DE CAJA 
+

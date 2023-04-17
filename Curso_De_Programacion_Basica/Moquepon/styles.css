@@ -1,0 +1,72 @@
+
+/* SELECTORES CSS estos deben ser extraidos desde el HTML  
+<h1>POKEMON PON PON</h1> HTML       
+TIPO h1 {
+          color:brown;
+        }
+punto .Clase          
+<h1 calss="titulo">POKEMON PON PON</h1> HTML
+.titulo {
+          color:brown;
+        }
+#ID 
+<h1 id="titulo">POKEMON PON PON</h1> HTML
+#titulo {
+          color:brown;
+        }
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');/* agregamos la fuente pokemon */
+body{
+
+  font-family: 'Pokemon Solid', sans-serif;
+  background-color: crimson;
+}
+/* PROPIEDADES Y VALORES CSS REFERENCEWWW */
+
+
+
+.subtitulo {
+    color: aliceblue;
+
+  }
+#Selecionar-pokemon {
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+*.tarjetas{
+
+    display: flex;
+    gap:10px;
+}
+
+/*  */
+*.tarjeta-de-pokemon { /* Colocamos el * para defeinir como Universal*/
+  
+    WIDTH: 238PX;
+    HEIGHT: 130PX;
+    BACKGROUND: #705555;
+    PADDING: 10PX;
+    BOX-SIZING: border-box;
+    margin: 10px;
+    border: 3px solid black;
+    display: flex;/* para que las imagenes se huviquen uno a lado de otraS */
+    color: aliceblue;
+    align-items: center;
+    justify-content: center
+}
+
+*.tarjeta-de-pokemon img {/* Lo colocamos asi con un selector de imagen para no colocar un nuevo selector */
+  width: 100px;
+}
+
+ 
+input{/* Selector de tipo */
+
+ display: none;
+}

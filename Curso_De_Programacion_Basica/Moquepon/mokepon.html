@@ -3,51 +3,74 @@
   <head>
     <meta charset="utf-8">
     <title>POKEMON</title>
-    <script src="js/mokepon.js"></script>
-    <!-- scr="" NOS SIRVE PARA LLAMAR UN ARCHIVO EN JAVASCRIPT DESDE ESA DIRECCION LINK -->
-
+    <script src="js/mokepon.js"></script><!-- scr="" NOS SIRVE PARA LLAMAR UN ARCHIVO EN JAVASCRIPT DESDE ESA DIRECCION LINK -->
+    
+    <link rel="stylesheet" href="./styles.css"><!-- llama al archivo de los estilos  --> 
+    <!--  -->
   </head>
   <body>
-    <h1>POKEMON PON PON</h1>   <!--Titulo grande-->
+     
       <!-- SECCION DE SELECCION -->
       <section id= "Selecionar-pokemon">
-      <h2>Seleciona tu Pokepon</h2>
-      
-      <label for="scuartle">Scuartle</label><!--for="variable" UNIMOS EL TEXTO CON EL RADIO PARA QUE AL SELECCIONAR EL TEXT SE SELECCIOE EL RADIO -->
-      <!--IMPUTS TIPO RADIO -->
-      <input type="Radio" name="mokepon" id="scuartle"/><!--IMPUT TIPO=RADIO NOMBRE = MOKEPON ID = "ID"-->
-      <label for="chicorita">Chicorita</label>
-      <input type="Radio" name="mokepon" id="chicorita"/>
-      <label for="charmander">Charmander</label>
-      <input type="Radio" name="mokepon" id="charmander"/>
-      <!-- <label for="miu">Miu</label>
-      <input type="Radio" name="mokepon" id="miu"/>
-      <label for="onix">Onix</label>
-      <input type="Radio" name="mokepon" id="onix"/>
-      <label for="pikachu">Pikachu</label>
-      <input type="Radio" name="mokepon" id="pikachu"/> -->
-      <button id="seleccionmokepon">Seleccionar</button><!--BOTON DE SELECCION-->
-      <!-- AQUI VAN LOS MOKEPONES -->
-      </section>
-      <!-- SECCION PARA ATAQUES -->
-      <section id= "Selecionar-ataque">
-      <h2>Seleciona tu Ataque</h2>
-      <p>Tu Pokemon <span id="nombremokepon"><!-- AQUI VIENE EL NOMBRE DEL POKEMON --></span> tiene <span id= "vidasjugador">3💖</span> vidas</p>       <!--SPAN SIRVE PARA JALAR JAVASCRIPT -->
-      <p>El Pokemon del contringante<span id="nombremokeponenemigo"></span> tiene <span id= "vidasenemigo">3💖</span> vidas</p>
-      <button id="btnfuego">FUEGO 🔥🔥🔥 </button>
-      <button id="btnawa">AWA 💧💧💧 </button>
-      <button id="btntierra">TIERRA 🌱🌱🌱  </button>
+          <h1 class="titulo">
+            <img src="./pokemones/pokemon.png "alt="Pokemon">
+             </h1>  <!--Titulo grande////<h1 class="titulo">le damos una clase para el selector CSS--> 
+          
+          <h2 class="subtitulo">Selecciona tu Pokemon</h2>
+          <div class="tarjetas"><!-- ETIQUETA PARA AMARRAR  -->
+              <label class = "tarjeta-de-pokemon" for="scuartle">
+                  <p>SQUIRTLE</p>
+                  <img src="./pokemones/sqirtle.png" alt="SQUIRTLE">
+              </label><!--for="variable" UNIMOS EL TEXTO CON EL RADIO PARA QUE AL SELECCIONAR EL TEXT SE SELECCIOE EL RADIO -->
+              <input type="Radio" name="mokepon" id="scuartle"/><!--IMPUT TIPO=RADIO NOMBRE = MOKEPON ID = "ID"-->
+              
+              <label class = "tarjeta-de-pokemon"for="chicorita">
+                <p>BULBASUR</p>
+                <img src="./pokemones/bullbasur.png" alt="BULBASUR">
+                </label>
+              <input type="Radio" name="mokepon" id="chicorita"/>
+              
+              <label class = "tarjeta-de-pokemon"for="charmander">
+               <p>CHARMANDER</p> 
+               <img src="./pokemones/charmander.png" alt="CHARMANDER">
+               </label>
+              <input type="Radio" name="mokepon" id="charmander"/>
+          </div>
+          <!-- <label for="miu">Miu</label>
+          <input type="Radio" name="mokepon" id="miu"/>
+          <label for="onix">Onix</label>
+          <input type="Radio" name="mokepon" id="onix"/>
+          <label for="pikachu">Pikachu</label>
+          <input type="Radio" name="mokepon" id="pikachu"/> -->
+          <button id="seleccionmokepon">Seleccionar</button><!--BOTON DE SELECCION selector de tipo ID-->
+          <!-- AQUI VAN LOS MOKEPONES -->
       </section>
 
+      <!-- SECCION PARA ATAQUES -->
+      <section id= "Selecionar-ataque">
+          <h1 class="titulo">POKEMON 🌱🔥💧 </h1>
+
+          <h2>Seleciona tu Ataque</h2>
+              <p>Tu Pokemon <span id="nombremokepon"><!-- AQUI VIENE EL NOMBRE DEL POKEMON --></span> tiene <span id= "vidasjugador">3💖</span> vidas</p>       <!--SPAN SIRVE PARA JALAR JAVASCRIPT -->
+              <p>El Pokemon del contringante<span id="nombremokeponenemigo"></span> tiene <span id= "vidasenemigo">3💖</span> vidas</p>
+
+              <p>
+              <button id="btnfuego">FUEGO 🔥🔥🔥 </button>
+              <button id="btnawa">AWA 💧💧💧 </button>
+              <button id="btntierra">TIERRA 🌱🌱🌱  </button>
+              </p>
+              
+      </section>
+      
       <!-- SECCION PARA MENSAJES -->
       <section id= "mensajes">
 
-      </section>
-      <!-- SECCION PARA REINICIAR EL JUEGO -->
-      <section id="Reiniciar">
-        <p></p>
-        <button id="btnreiniciar">Reiniciar</button>
-      </section>
+          </section>
+          <!-- SECCION PARA REINICIAR EL JUEGO -->
+          <section id="Reiniciar">
+            <p></p>
+            <button id="btnreiniciar">Reiniciar</button>
+          </section>
 
-    </body>
-  </html>
+  </body>
+</html>
