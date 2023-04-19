@@ -1,0 +1,9 @@
+CTRL+C+K COMENTAR EN VISUAL 
+CTRL+C+U QUITAR COMENTARIO
+WIN+IZQUIERDA O DERECHA Minimiza pantalla para trabajar en dos perifericos 
+
+Seleccionas la parte que quieres copiar, luego con SHIFT + ALT + FLECHA ABAJO copias todo abajo, presiona la flecha segun cuantas copias quieras realizar.
+
+Selecciona una palabra y con CTRL+D seleccionas la siguiente igual y sucesivamente, luego escribe lo que necesites.
+
+Con ALT+CLICK puedes crear multicursores, manten presionado ALT y da click donde desees el otro cursor.

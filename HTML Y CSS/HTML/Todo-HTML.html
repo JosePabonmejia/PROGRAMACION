@@ -3,26 +3,28 @@
 <html lang="en"><!-- Contenedor padre con atriburto especial lang= es lo que le dice al navegador cual es el lenguaje que tiene este proyecto -->
 <!--head y body son hermanos  Contenedor head contiene todo lo que es importante como:las dependencias, librerias y no es vidual para el usuario final  --> 
     <head> 
-        <!-- En el head va a ir el cerebro  -->
-        <!--Etiquetas meta: le dan informacion el navegador para que sepa como tratar al aproyecto -->
+        <!--HEAD CEREBRO-->
+        <!--ETIQUETAS META: le dan informacion el navegador para que sepa como tratar al aproyecto -->
         <meta charset="UTF-8"><!--Extencion para entender caracteres especificiales TAMBIEN hay utf16 y 32-->
         <meta name="description" content="www.pagina_gatos"><!--content(contenido)= tipo de descripcion para una pagina lo primero que aparece en el navegador sobre la pagina    -->
         <meta name="robots" content="index,follow"><!-- Le dice a los bucadores que estamos autorizando que puedan ayudar a colocar nuestra pagina con relacion ala busqueda que se hace   -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--100% RESPONSIVE view port es el tamaño de la pantalla  Este meta atuda a que si el proyecto se abre desde una pagina web pueda escalarce un poco el texto y las imagenes y la gente pueda verlo mejor desde moviles -->
         <link rel="stylesheet" href=""><!--REL=Estilos y HREF=link o referencia de la fuente CSS  -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">|  
+        
         <title>Index y estructura basica HEAD</title><!--Titulo para el navegador  -->
     </head><!--Termina el head-->
-    <!-- body es la parte visible de nuestro website. Es muy importante usar HTML semántico y no llenar todo de <div> para que nuestro sitio sea mejor interpretado por el navegador y por lo tanto más accesible.-->
+
+    <!-- BODY es la parte visible de nuestro website. Es muy importante usar HTML semántico y no llenar todo de <div> para que nuestro sitio sea mejor interpretado por el navegador y por lo tanto más accesible.-->
     <!--Existen dos tipos de etiquetas IMPORTANTE= Etiquetas de contenido y etiquetas contenedoras -->
 
     <!--Las etiquetas contenedoras van a llevar mas etiquetas adentro y nos van a ayudar a generar la estructura de la pagina -->
     <body>
-    <!--Etiquetas contenedoras segun la anatomia de HTML, ejemlos:-->
+    <!--ETIQUETAS CONTENEDORAS segun la anatomia de HTML, ejemlos:-->
     <!--HEADER-->
         <header><!--Encabezado, aqui va el logo de la empresa, navegador, buscador,  -->
             <nav></nav><!--Barra de navegacion o seccion de nabvegacion -->
+            <img src="" alt=""><html><!--Imagen para la empresa-->
         </header>
     <!--MAIN-->
         <main><!--Parte principal del la pagina o contenido central -->
@@ -55,13 +57,43 @@
 
         <h2>Soy subtitulo</h2><!--Sub titulo -->
         <h3><h4><h5>etc hahahaha</h5></h4></h3>
-
+n
         <a href="#">Soy un link</a><!--Etiqueta de ancla= ayuda a generar ipervinculos osea lleva de un lado a otro entre formularios, paginas, etc.-->
+ 
+       <!--Aanatomia de una etiqueta de html -->
 
-       
+       <!--ETIQUETAS DE IMAGENES -->
+       <!--IMAGENES Necesita de una etiqueta BUENAS PRACTICAS CEMANTICA-->
+       <figure>
+       <img src="./ Aqui_va_la_direccion_de_la_carpeta" alt="Por_si_la_imagen_se_pierde_imprime_mensage">
+       </figure>
+       <!--Colocar una descricion de la imagen despues-->
+       <figcaption>Es-una-imagen-de=""</figcaption>
 
+       <!--ETIQUETAS PARA VIDEOS Tiene atributos-->
+       <section>
+        <video src="./" controls preload ="auto"></video><!--Atributo controls= Para los controles del video) Preload=none para que el video renderice junto con la pagina BUENAS PRACTICAS-->
+       </section>
+
+       <section>
+        <video src="./video_1.mp4#t=10,60"></video><!-- # Quiero que el video inicie en un timpo especifico y termine tambien -->
+       </section><!--Solo segundos inicia en el segundo 10 y termina en el primer minuto -->
+       <!--Si quieres formato para los videos, se debe utilizar una etiqueta SOURSE-->
+       <section>
+          <video controls preload="auto">
+            <source src="./video_1.mp4"/>
+            <source src="./video_2.mp3"/>
+            <source src="./video_3.m4v"/>
+            <source src="./video_4.etc"/>
+            <source src="./video_5.etc"/>
+          </video> 
+        <section>
+            <video src="./video_1" controls preload="auto" loop></video><!--Loop= se repite el video una vez que este acaba -->
+
+        </section>
+        
+       </section>
     </body>
 </html>
 
 <!-- -->
-

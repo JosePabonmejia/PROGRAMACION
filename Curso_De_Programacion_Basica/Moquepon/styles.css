@@ -16,11 +16,13 @@ punto .Clase
         }
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');/* agregamos la fuente pokemon */
+@import url('https://fonts.cdnfonts.com/css/ernest-borgnine');/* agregamos la fuente pokemon */
 body{
 
-  font-family: 'Pokemon Solid', sans-serif;
+  font-family: 'Ernest', sans-serif;/* Se pega de la pagina origen de la fuente */
   background-color: crimson;
+  font-size: 30px;
+  color: aliceblue;
 }
 /* PROPIEDADES Y VALORES CSS REFERENCEWWW */
 
@@ -35,6 +37,7 @@ body{
   display: flex;
   justify-content: center;
   flex-direction: column;
+   
   align-items: center;
  
 }
@@ -61,6 +64,26 @@ body{
     justify-content: center
 }
 
+#seleccionmokepon{
+width: 236px; 
+height: 29px;
+border-radius: 20px;
+background: transparent;
+border: 3px solid;
+color: white;
+margin-top: 30px;
+}
+
+#btnreiniciar
+{
+  width: 98px; 
+  height: 29px;
+  border-radius: 20px;
+  background: transparent;
+  border: 3px solid;
+  color: white;
+  margin-top: 30px;
+  }
 *.tarjeta-de-pokemon img {/* Lo colocamos asi con un selector de imagen para no colocar un nuevo selector */
   width: 100px;
 }

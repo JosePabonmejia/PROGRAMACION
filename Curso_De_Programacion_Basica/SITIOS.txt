@@ -2,3 +2,5 @@ PARA MANIPULAR EL DOM
 https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML
 
 C:\wamp64\www\GLOBAL\CMS1\public\argon\img\brand
+
+https://www.cdnfonts.com/ernest-borgnine.font //fuentes de internet 

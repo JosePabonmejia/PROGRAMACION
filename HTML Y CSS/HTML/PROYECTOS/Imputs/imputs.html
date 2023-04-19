@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+    </head>
+    <!--BODY-->
+    <body>
+        <!--ESTRUCTURA PARA GENERAR UN INPUT-->
+        <form action="">
+             <label for="nombre-del-input">
+                 <span>nombre</span>
+                 <input type="text" id="nombre-repite">
+             </label>
+        </form>
+        <h1></h1>
+        <!--PRIMERO UN DIV PARA HACER LA PRUEVA-->
+        <!-- <div>
+            <input type="text">
+        </div> -->
+        <!--COMO CREAR UN FOMRULARIO EN EL BODY-->
+        <form action=""><!--Aqui viene un formulario y el usuario dejara informacion-->
+            <!--Input tipo TEXT-->
+            <label for="nombre"> <!--Variable de entrada-->
+                <span>Introduce tu nombre</span><!--Imprimir mensajes-->
+                <input tipe="text" id="nombre">
+            </label>
+            <h1></h1>
+            <!--Input tipo DATE-->
+            <label for="fecha-de-nacimiento">
+                <span>Selecciona tu fecha de nacimiento</span>
+                <input type="date" id="fecha-de-nacimiento">
+            </label>
+            <h1></h1>
+            <!--Input tipo TIME-->
+            <label for="horario">
+                <span>En que horario estudias</span>
+                <input type="time" id="horario">
+            </label>
+            <h1></h1>
+            <!-- Input tipo CALENDARIO -->
+            <label for="hora">
+                <span>Hora</span>
+                <input type="time" id="hora" name="hora">
+            </label>
+            <label for="dia">
+                <span>Dia</span>
+                <input type="date" id="dia" name="dia">
+            </label>
+            <label for="semana">
+                <span>Semana</span>
+                <input type="week" id="semana" name="semana">
+            </label>
+            <label for="mes">
+                <span>Mes</span>
+                <input type="month" id="mes" name="mes">
+            </label>
+            <input type="submit">
+            <h1></h1>
+            <!--MAS USADO DATE-->
+                <form action="">
+                    <label for="calensario">
+                        <span>Calendario</span>
+                        <input type="datetime-local" id="calendario" name="calendario">
+                    </label>
+                <!-- IMPUTS DE SELECT -->
+                <select name="cursos" id="cursos" autocomplete="" required="">
+                    
+                    <option value="English">English</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Java">Java</option>
+                    <option value="HTML">HTML</option>
+                </select>
+                <!-- Lista -->
+                <input list="cursos">
+                <datalist id="cursos">
+                        <option value="English">English</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Java">Java</option>
+                        <option value="HTML">HTML</option>
+                </datalist>    
+                
+                <!-- INPUTS TIPO SUBMIT -->
+                <input type="submit" value="Enviar_1">
+                <button type="submit">Enviar📩</button>
+                </form>
+        </form>
+    </body>
+</html>
+<!---->

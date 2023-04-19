@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <!-- BODY -->
+    <body>
+        <main>
+            <form action="">
+                 <!-- IMPUTS DE LLENADO -->
+                <label for="nombre">  
+                    <span>Cual es tu nomnbre?</span>
+                    <input type="text" name="nombre" id="nombre" autocomplete="name" required="name"/><!--El AUTOCOMPLETE hace que el navegador complete los datos de manera automatica-->
+                </label>    <!-- REQUIRED sirve para que el navegador nos informe si faltan llenar datos-->
+
+                <label for="correo">
+                    <span>Cual es tu correo?</span>
+                    <input type="email" name="correo" id="correo" autocomplete="email" required="email"/>
+                </label>
+
+                <label for="pais">
+                    <span>Pais</span>
+                    <input type="text" name="pais" id="pais" autocomplete="country" required="country"/>
+                </label>
+
+                <label for="cp">
+                    <span>Codigo postal</span>
+                    <input type="text" name="cp" id="cp" autocomplete="postal-code" required="postal-code"/>
+                </label>
+                <input type="submit">
+                <!-- Calendario -->
+                <label for="calensario">
+                    <span>Calendario</span>
+                    <input type="datetime-local" id="calendario" name="calendario" autocomplete="bday-day" required="datetime-local">
+                 </label>
+
+                <!-- IMPUTS DE SELECT -->
+                <select name="cursos" id="cursos" autocomplete="" required="">
+                
+                    <option value="English">English</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Java">Java</option>
+                    <option value="HTML">HTML</option>
+                </select>
+                <!-- Lista -->
+                <input tipe="list">
+                <datalist id="cursos">
+                        <option value="English">English</option>
+                        <option value="CSS">CSS</option>
+                        <option value="Java">Java</option>
+                        <option value="HTML">HTML</option>
+                </datalist>
+               
+            </form>
+        </main>
+        
+    </body>
+</html>

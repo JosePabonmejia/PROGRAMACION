@@ -1,0 +1,17 @@
+/* COMO LLAMAR ESTILOS?  */
+
+/*Llamando estilos por etiqueta ej: P */ 
+p{
+    color: crimson;
+    font-size: 20px;
+}
+/* Llamando estilos por CLASE = Iciciamos con un punto y luegno el nombre del la clase en HTML*/
+/* .NOMBRE */
+.parrafo{
+color: darkgreen;
+font-size: 50px;
+}
+#parrafo{
+color: darkorange;
+font-size: 30px;
+}

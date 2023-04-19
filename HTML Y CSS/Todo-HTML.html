@@ -1,0 +1,148 @@
+<!-- ESTA LINEA DE CODIGO INDICA: -->
+<!DOCTYPE html><!-- todo lo que viene aqui es HTML-5 -->
+<html lang="en"><!-- Contenedor padre con atriburto especial lang= es lo que le dice al navegador cual es el lenguaje que tiene este proyecto -->
+<!--head y body son hermanos  Contenedor head contiene todo lo que es importante como:las dependencias, librerias y no es vidual para el usuario final  --> 
+    <head> 
+        <!--HEAD CEREBRO-->
+        <!--ETIQUETAS META: le dan informacion el navegador para que sepa como tratar al aproyecto -->
+        <meta charset="UTF-8"><!--Extencion para entender caracteres especificiales TAMBIEN hay utf16 y 32-->
+        <meta name="description" content="www.pagina_gatos"><!--content(contenido)= tipo de descripcion para una pagina lo primero que aparece en el navegador sobre la pagina    -->
+        <meta name="robots" content="index,follow"><!-- Le dice a los bucadores que estamos autorizando que puedan ayudar a colocar nuestra pagina con relacion ala busqueda que se hace   -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--100% RESPONSIVE view port es el tamaño de la pantalla  Este meta atuda a que si el proyecto se abre desde una pagina web pueda escalarce un poco el texto y las imagenes y la gente pueda verlo mejor desde moviles -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">|  
+        
+        <!--ETIQUETAS DE REFERENCIA-->
+        <link rel="stylesheet" href=""><!--REL=Estilos y HREF=link o referencia de la fuente CSS  -->
+        <title>Index y estructura basica HEAD</title><!--Titulo para el navegador  -->
+    </head><!--Termina el head-->
+
+
+    <!-- BODY es la parte visible de nuestro website. Es muy importante usar HTML semántico y no llenar todo de <div> para que nuestro sitio sea mejor interpretado por el navegador y por lo tanto más accesible.-->
+    <!--Existen dos tipos de etiquetas IMPORTANTE= Etiquetas de contenido y etiquetas contenedoras -->
+
+    <!--Las etiquetas contenedoras van a llevar mas etiquetas adentro y nos van a ayudar a generar la estructura de la pagina -->
+    <body>
+    <!--ETIQUETAS CONTENEDORAS segun la anatomia de HTML, ejemlos:-->
+    <!--HEADER-->
+        <header><!--Encabezado, aqui va el logo de la empresa, navegador, buscador,  -->
+            <nav></nav><!--Barra de navegacion o seccion de nabvegacion -->
+            <img src="" alt=""><html><!--Imagen para la empresa-->
+        </header>
+    <!--MAIN-->
+        <main><!--Parte principal del la pagina o contenido central -->
+             <section><!--Secciones y estos pueden tener articulos-->
+                  <article><!--Pueden ser listas como supermercado etc -->
+
+                  </article>  
+             </section>
+
+             <ul><!--Lista desordenada-->
+                 <li><!--Lista de items list-item-->
+
+                 </li>
+             </ul>
+             <ol><!----></ol><!--Lista ordenada order-list-->   
+        </main>
+    <!--FOOTER-->
+        <footer><!--Final de la pagina web como informacion, etc.-->
+            
+        </footer>
+
+        <div><!--Malas practicas-->
+            
+        </div>
+    <!--Las etiquetas de contenido van a llevar el texto, las imagenes, los videos o cualquier cosa que se vaya a poder renderizar en el proyecto  -->
+        <!--TIPO TEXTO -->
+        <p>Soy un parrafo</p><!--Parrafo-->
+        
+        <h1>Soy un titulo</h1><!--Encavezado, titulo, etc.-->
+
+        <h2>Soy subtitulo</h2><!--Sub titulo -->
+        <h3><h4><h5>etc hahahaha</h5></h4></h3>
+n
+        <a href="#">Soy un link</a><!--Etiqueta de ancla= ayuda a generar ipervinculos osea lleva de un lado a otro entre formularios, paginas, etc.-->
+ 
+       <!--Aanatomia de una etiqueta de html -->
+
+       <!--ETIQUETAS DE IMAGENES -->
+       <!--IMAGENES Necesita de una etiqueta BUENAS PRACTICAS CEMANTICA-->
+       <figure>
+       <img src="(./) Aqui_va_la_direccion_de_la_carpeta" alt="Por_si_la_imagen_se_pierde_imprime_mensage">
+       </figure>
+       <!--Colocar una descricion de la imagen despues-->
+       <figcaption>Es-una-imagen-de=""</figcaption>
+
+       <!--ETIQUETAS PARA VIDEOS Tiene atributos-->
+       <section>
+        <video src="(./)" controls preload ="auto"></video><!--Atributo controls= Para los controles del video) Preload=none para que el video renderice junto con la pagina BUENAS PRACTICAS-->
+       </section>
+
+       <section>
+        <video src="(./)video_1.mp4#t=10,60"></video><!-- # Quiero que el video inicie en un timpo especifico y termine tambien -->
+       </section><!--Solo segundos inicia en el segundo 10 y termina en el primer minuto -->
+       <!--Si quieres formato para los videos, se debe utilizar una etiqueta SOURSE-->
+       <section>
+          <video controls preload="auto">
+            <source src="./video_1.mp4"/>
+            <source src="./video_2.mp3"/><!--Ayuda en caso que el navegador no encuentre el formato que tenemos del video-->
+            <source src="./video_3.m4v"/><!--asi que colocamos el video en varios formatos -->
+            <source src="./video_4.etc"/>
+            <source src="./video_5.etc"/>
+            
+          </video> 
+        <section>
+            <video src="./video_1" controls preload="auto" loop></video><!--Loop= se repite el video una vez que este acaba -->
+
+        <!-- EJEMPLOS DE ALGUNOS INPUTS DENTRO DE UN MAIN-->
+        <main>
+            <form action="">
+                
+                <label for="nombre">  
+                    <span>Cual es tu nomnbre?</span>
+                    <input type="text" name="nombre" id="nombre" autocomplete="name" required="name"/><!--El AUTOCOMPLETE hace que el navegador complete los datos de manera automatica-->
+                </label>    <!-- REQUIRED sirve para que el navegador nos informe si faltan llenar datos-->
+
+                <label for="correo">
+                    <span>Cual es tu correo?</span>
+                    <input type="email" name="correo" id="correo" autocomplete="email" required="email"/>
+                </label>
+
+                <label for="pais">
+                    <span>Pais</span>
+                    <input type="text" name="pais" id="pais" autocomplete="country" required="country"/>
+                </label>
+
+                <label for="cp">
+                    <span>Codigo postal</span>
+                    <input type="text" name="cp" id="cp" autocomplete="postal-code" required="postal-code"/>
+                </label>
+                <input type="submit">
+
+            <!-- IMPUTS DE SELECT -->
+            <select name="cursos" id="cursos" autocomplete="" required="">
+                
+                <option value="English">English</option>
+                <option value="CSS">CSS</option>
+                <option value="Java">Java</option>
+                <option value="HTML">HTML</option>
+            </select>
+            <!-- Lista -->
+            <input list="cursos">
+            <datalist id="cursos">
+                    <option value="English">English</option>
+                    <option value="CSS">CSS</option>
+                    <option value="Java">Java</option>
+                    <option value="HTML">HTML</option>
+            </datalist>
+            </form>
+            <!-- INPUTS TIPO SUBMIT -->
+                <input type="submit" value="Enviar_1">
+                <button type="submit">Enviar📩</button>
+                </form>
+        </main>
+
+
+    </body>
+</html>
+
+<!-- -->
