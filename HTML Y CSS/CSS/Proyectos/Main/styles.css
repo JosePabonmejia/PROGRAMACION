@@ -1,0 +1,17 @@
+.main-nav{
+ color: blue;   
+ background-color: rgb(14, 36, 172);
+ display: inline-block;
+}
+
+.nav_item{
+    display: inline-block;
+}
+.nav_item a {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color: rgb(32, 165, 6);
+    display: inline-block;
+}

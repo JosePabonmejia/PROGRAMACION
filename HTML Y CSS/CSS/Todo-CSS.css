@@ -6,8 +6,9 @@
     margin-top: 10px;
     background-color: blueviolet;
 }
+/* El display sirve para que los objetos que se encuentran el la seccion seleccionada se pongan uno a lado del otro */
 .main-nav__item{
-  display: inline-block;
+  display: inline-block;  
 }
 /* PSEUDO CLASES */
 .main-nav a {
