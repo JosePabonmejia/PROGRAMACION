@@ -1,0 +1,14 @@
+///QUE ES UN ARREGLO
+
+Un arreglo es una variable compuesta, o sea una varíale que contiene múltiples valores.
+podemos acceder a esos valores haciendo referencia a sus respectivos subíndices, 
+los subíndices en un arreglo siempre empiezan en cero.
+
+COMO SE LAS IDENTIFICA?
+Con sub indices, estos siempre inician en 0 sirven para acceder a los valores que se encuenten dentro del arreglo
+
+///ARREGLOS ASOCIATIVOS QUE ES UN SUB-INDICE
+Los arreglos asociatuvos puee usarse para guardr datos obtenidos de una base de datos, puede utilizarse para agrupar 
+caracteristicas de elmentos como lo hecho con personas, pueden usarse para guardar las “piezas” de una URL incluso 
+pueden guardarse en constantes, es decir un arraglo de varios PI… ok ok, no de varios PI pero su podría llegar a ser el 
+nombre de un usuario que es el mismo durante una sesion
