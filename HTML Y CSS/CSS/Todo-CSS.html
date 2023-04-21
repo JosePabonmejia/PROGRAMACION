@@ -1,3 +1,4 @@
+<!-- LAMAR CLASES DE CSS -->
 <!DOCTYPE html>
 <html lang="en">
     <!-- HEAD -->
@@ -5,10 +6,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clases CSS</title>
+        <title>Llamar Clases CSS</title>
         <!-- Mejor manera de llamar estilos -->
         <link rel="stylesheet" href="./styles.css">
-    <!--Funciona pero no es muy practico-->
+    <!--Funciona pero no es muy practico class id -->
     <style>
       h2{
         
@@ -35,6 +36,7 @@
         <P id="parrafo">HOLA MUNDO</P>
     </body>
 </html>
+
 <!-- 
 /* COMO LLAMAR ESTILOS?  */
 
@@ -54,3 +56,274 @@ color: darkorange;
 font-size: 30px;
 }
  -->
+<!-- PSEUDO CLASES -->
+<!-- Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. 
+    Por ejemplo, :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector. -->
+<!-- PSEUDO ELEMENTO -->
+<!-- Los pseudo-elementos en CSS son un mecanismo para acceder a partes del HTML que no tienen asociado un nodo en el DOM. Por ejemplo, 
+    está claro que una «parte de nuestro documento» podría ser «la primera línea de un párrafo», «la primera letra de un párrafo» o «la selección que ha hecho el usuario» -->
+ <!DOCTYPE html>
+ <html lang="en">
+     <!-- HEAD -->
+     <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="./styles.css">
+         <title>Clases pseudoclases</title>
+ 
+     </head>
+     <!-- BODY -->
+     <!-- FROMAS DE HACER CLASES SEGUN BEM-->
+     <body>
+         <!--BARRA DE NAVEGACION-->
+         <header>
+             <nav>
+                 <ul class="main-nav"><!--Le colocamos el nombre de la clase a todos los li para que los estilos solo afecten a esa seccion-->
+                     <li class="main-nav__item"><a href="">Home</a></li><!--Etiqueta de lista desordenada (ul) y una de ancla (a)para darle clicks-->
+                     <li class="main-nav__item"><a href="">Cursos</a></li>
+                     <li class="main-nav__item"><a href="">Istructores</a></li>
+                     <li class="main-nav__item"><a href="">Blog</a></li>
+                 </ul>
+             </nav>
+         </header>
+         <!-- MAIN -->
+         <main>
+             <section>
+                 <ul>
+                     <li>hola </li>
+                 </ul>
+             </section>
+         </main>
+     </body>
+ </html>
+
+ <!--PSEUDOCLASES  
+    /* ESTILOS DEL MAIN */
+.main-nav{
+    color: rgb(0, 255, 191);
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    background-color: blueviolet;
+}
+.main-nav__item{
+  display: inline-block;
+}
+/* PSEUDO CLASES */
+.main-nav a {
+ color: rgb(255, 255, 255);
+ padding: 5px;
+ border-radius: 3px;
+ text-decoration: none;
+ background-color: rgb(32, 165, 6);
+}
+/* HOVER sirve como evento: cuando colocamos el maouse sobre el texto se ilumina*/
+.main-nav__item a:hover{
+  color:blueviolet;
+}
+/* ACTIVE sirve como evento: cuando hacemos click el maouse sobre el texto se ilumina*/
+.main-nav__item a:active{
+    color:red;
+  }
+  /*PSEUDO ELEMENTOS */
+ ESTE AÑADE (!) DEPUES DEL MAIN-NAV-ITEM
+.main-nav__item a::after{
+    content: "!";
+}
+/*Algunos Pseudo-classes:
+:root{}
+//representa elemento HTML, con la especificidad de clase //usado para anidar variables CSS
+:active
+//se activa al hacer clic down
+:visited
+//cambio visual cuando se visita un enlace
+:hover
+//permite cambiar el estado de un elemento cuando elmause se sobrepone sobre él
+:first-child // para afectar solo al primer hijo // se coloca en el padre (ul) para afectar a su primer hijo (li)
+:last-child // para afectar solo al ultimo hijo
+:not  //negar una codiciones (ignorar una condicion) //ejemplo .clase:not(last-child)
+//afecto a todos menos el ultimo
+:empty 
+//ayuda a detectar cuando un elemento esta vacio. //ejemplo .class:empty{background:yellow;} //resaltar
+:nth-child() 
+// tag:nth-child(2){} //afectara al segundo elemento
+*/ -->
+<!-- MODELO DE CAJA -->
+<!-- El modelo de caja CSS es un módulo CSS que define cajas rectangulares, incluyendo sus rellenos y márgenes, que son generadas para lo -->
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modelo Caja</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>HOLA MUNDO</h1>
+                <div>
+                    <p>
+                      Soy un parrafo  
+                    </p>
+                </div>
+            </section>        
+        </main>
+    </body>
+</html> 
+ <!--  
+
+ /* MODELO CAJA */
+
+                                                  /* IMPORTANTE*/
+
+ /* Elementos que no deben faltar de manera universal ya que estamos receteando los valores predeterminados del navegador*/
+      *{
+     box-sizing: border-box;/* Sirve para que el borde se ajuste a la pantalla del usuario*/
+     padding: 0%;/*Iniciamos con todo en 0*/
+     margin: 0%;
+ }
+ 
+  main {
+ width: 100%;/* Ancho */
+ height: 500px;/* Largo */
+ border: 10px solid red;/* Borde para la caja */
+ padding: 20px 35px; /*Padding de 20 pixeles de arriba a abajo y 35 de derecha a izquierda  */
+ /* Espacio relleno para alejar los objetos el uno del otro   */
+ /* Si quieres puedes ser mas especifico colocando un (padding-left: ;) o un (padding-right: ;) */
+ 
+ 
+ }
+-->
+<!-- HERENCIA -->
+<!-- La herencia en CSS es el mecanismo mediante el cual determinadas propiedades de un elemento padre se transmiten a sus hijos. 
+    De hecho, se parece mucho a la herencia genética. Si los progenitores tienen los ojos azules, los hijos seguramente también tendrán los ojos azules. -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HERENCIA</title>
+    </head>
+    <body>
+        <main>
+            <h1>soy un titulo</h1>
+            <p>soy un parrafo</p>
+        </main>
+    </body>
+</html>
+<!-- EL (p) parrafo va a eredar el tamaño del (h1) -->
+<!-- html{
+    font-size: 75%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   h1{
+     font-size:  inherit;
+   } -->
+
+<!-- ESPECIFICIDAD EN SELECTORES -->
+
+<!--
+
+    CASCADAS
+La cascada se usa cuando hay dos o mas declaraciones que afectan a un elemento, es decir, cuando hay mas de dos reclas que afectan a una etiqueta html, 
+cuando esto ocurre la cascada determinara cual de estas es tiene mayor importancia, y la de mayor importancia sera la que se aplicara. 
+L forma de calcular el peso de una regla no se hace de forma arbitraria, se calculan en base a 3 criterios:
+1.- Importancia : Las declaraciones importantes son las declaraciones que van seguidas de una directiva llamada: !important. Cualquier otra declaracion sin !important son consideradas declaraciones normales.
+
+2.- Especificidad : La regla dice que el selector mas especifico sera el que se tome en cuenta. La forma para calcular la especificidad de un selector se hace con la siguiente formula.
+se juntan todos los bloques obtenidos, a mayor numero mayor especificidad, y sera tomado en cuente la regla con mayor especificidad.
+
+3.-Orden Podemos definir los estilos en hojas externas, en la cabecera de la pagina y en la misma etiqueta (estilos en linea), 
+el navegador lee el contenido de una pagina de arriba hacia bajo y los ultimos estilos definidos seran los que se tomaran en cuenta.
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Especificidad</title>
+        <link rel="stylesheet" href="./styles.css">
+
+    </head>
+
+    <body>
+        <header class="page-header">
+            <h1 id="page-title" class="title">Empresa</h1>
+            <nav>
+                <ul id="main-nav" class="nav">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Cursos</a></li>
+                    <li><a href="">Instructores</a></li>
+                    <li><a href="" class="Blog">Blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+    </body>
+</html>
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding:0%;
+}
+h1{
+    font-family: serif;
+    color: rgb(139, 39, 14);
+    margin-bottom: 16px;
+}
+
+.title {
+font-size: 18px;
+font-family: monospace;
+}
+
+.nav {
+  margin-top:10px ;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.nav li {
+    display: inline-block;/*Para que los elementos esten uno del lado del otro */
+} 
+
+.nav a {
+    color: aliceblue;
+    background-color: brown;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration:none ;
+}
+
+    .nav .Blog{
+ background-color: aquamarine  ;
+}  
+
+<!-- Combinadores CSS
+https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators
+HERMANO ADYACENTE 
+p + h2 { Todas las etiquetas p y h2 seran rojas
+    color: red;
+}
+HERMANO GENERAL
+h2 ~ p { 
+    color: red;
+}
+HIJO Y DECENDIENTE 
+/* HIJO En este caso: Todo lo que este en el Padre(div) sera de color rojo*/
+div > p {
+    color: rebeccapurple;
+} 
+/* DECENDIENTE MAS USADO En este caso todsa las etiquetas que esten dentro del navegador (nav)  */
+div p {
+    color: red;
+}
+
+-->

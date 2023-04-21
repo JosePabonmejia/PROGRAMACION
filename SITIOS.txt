@@ -20,3 +20,5 @@ https://fonts.google.com/ //Fondos mas seguros
 ///PARA IMPUTS GUIAS HTML CSS ETC
 
 https://www.w3schools.com/html/html_form_input_types.asp
+https://developer.mozilla.org/es/ 
+https://jonassebastianohlsson.com/specificity-graph/ ///calcular especidicidad

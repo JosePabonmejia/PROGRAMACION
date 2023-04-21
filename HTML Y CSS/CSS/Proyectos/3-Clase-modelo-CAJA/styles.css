@@ -1,0 +1,20 @@
+/* MODELO CAJA */
+/* {} */
+/* Elementos que no deben faltar de manera universal ya que estamos receteando los valores predeterminados del navegador*/
+     *{
+    box-sizing: border-box;/* Sirve para que el borde se ajuste a la pantalla del usuario*/
+    padding: 0%;/*Iniciamos con todo en 0*/
+    margin: 0%;
+}
+
+
+main {
+width: 100%;/* Ancho */
+height: 500px;/* Largo */
+border: 10px solid red;/* Borde para la caja */
+padding: 20px 35px; /*Padding de 20 pixeles de arriba a abajo y 35 de derecha a izquierda  */
+/* Espacio relleno para alejar los objetos el uno del otro   */
+/* Si quieres puedes ser mas especifico colocando un (padding-left: ;) o un (padding-right: ;) */
+
+
+}

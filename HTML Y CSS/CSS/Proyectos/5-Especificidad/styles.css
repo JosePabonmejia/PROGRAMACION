@@ -1,0 +1,39 @@
+/*  */
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding:0%;
+}
+h1{
+    font-family: serif;
+    color: rgb(139, 39, 14);
+    margin-bottom: 16px;
+}
+
+.title {
+font-size: 18px;
+font-family: monospace;
+}
+
+.nav {
+  margin-top:10px ;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.nav li {
+    display: inline-block;/*Para que los elementos esten uno del lado del otro */
+} 
+
+.nav a {
+    color: aliceblue;
+    background-color: brown;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration:none ;
+}
+
+    .nav .Blog{
+ background-color: aquamarine  ;
+}  
+

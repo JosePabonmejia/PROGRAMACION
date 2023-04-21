@@ -1,0 +1,8 @@
+/* HIJO En este caso: Todo lo que este en el Padre(div) sera de color rojo*/
+div > p {
+    color: rebeccapurple;
+} 
+/* DECENDIENTE En este caso todsa las etiquetas que esten dentro del navegador (nav)  */
+div p {
+    color: red;
+}
