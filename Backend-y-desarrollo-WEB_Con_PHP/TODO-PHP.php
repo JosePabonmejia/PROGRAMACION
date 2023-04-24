@@ -51,7 +51,7 @@ echo "La informacion de jose es: Edad: " .$personas["Jose"]["Edad"];
 echo "\n"; 
                             //MANIPULACION DE ARREGLOS FUNCIONES
 
-<?php!ªº                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+<?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 $edades = [18, 22, 40, 60];
 //Funcion count : Nos sirve para contar cuantos elementos hay dentro de un arreglo 
 echo "Existen ".count($edades) ." Datos";
@@ -206,3 +206,106 @@ switch($operacion){
      break;
 }
 echo"\n";
+                                    //CICLO WHILE
+El ciclo while es uno de los ciclos más famosos en programación, es conocido como un “ciclo 
+indefinido” porque no sabemos cuando va a terminar, debe contener valores booleanos.
+Para parar un contador infinito es la clasica (Ctrl+C)
+<!-- Sintaxis -->
+while (*Condicion* ){
+//Le decimos que imprima el mensaje hata que el contador llegue a ser mayor a 3 luego el while termina
+
+<?php
+$contador = 0;      
+while ($contador<3){//Condicion para parar el cliclo 
+   echo "El contador dio: ".$contador. " Vueltas \n";
+   $contador++;
+};
+
+echo "\n";
+
+//Reto: le pedire al usuario cuantas veces quiere que le muestre un mensaje
+$vueltas= readline("Cuantas veces quieres que tu mensje se reproduzca?: ");
+$contador=0;
+
+if ($vueltas > 100)
+{
+  echo "Estas loco carajo";
+}
+else
+{
+    $mensaje =readline("Introduce el mensaje: "); 
+    while ($contador<$vueltas){
+    $contador++;
+    echo $mensaje." ".$contador." Veces: "."\n";
+    }
+}    
+
+                                 //DO-While Validacion de usuario 
+Este ciclo es muy similar al while, con la particularidad de que no importa si tu conidición es 
+verdadera o es falsa, tu ciclo se va a ejecutar por lo menos una vez, al menos una, ya si se 
+vuelve a ejecutar o no dependerá de si la condición es verdadera o falsa, pero al menos una vez 
+sí que se va a ejecutar.
+<?php
+$usernames=array("Pepito","Mr.Michi","Jpabon");
+//otra manera $usernames= ["Pepito","Mr.Michi","Jpabon"];
+do
+{ 
+    $username=readline("Ingrese el nombre de usuario: ");
+    echo "\n";
+}
+while(in_array($username,$usernames));
+echo "Felicidades ya estas registrado";
+echo "\n";
+                                        //Siclo ForEach
+Sirve para buscar cualquier tipo de dato y mostrarlo, como en un arreglo
+Sintaxis  el iterable puede ser un arreglo  AS Valor que queremos mostar 
+foreach($Iterable as $Valor){
+    //Codigo a repetir
+}
+Otra menera de Sintaxis
+foreach($Iterable as $Llave =>$Valor){
+//Codigo a repetir
+}
+<?php
+$tiendita_de_cafes = array(
+    "Americano"=>24,
+    "Latte"=>14,
+    "Capuchino"=>30,
+    "Moca"=>22,
+);
+foreach ($tiendita_de_cafes as  $Cafes=>$Precio) {
+    echo "El cafe $Cafes cuesta $$Precio Bs\n";
+}
+echo "\n";
+
+ESTE CICLO TIENE 2 PROPIEDADES QUE LE INDICAN AL BUSCADOR (continue) y (breack) pare
+Ejemplo con breack
+$tiendita_de_cafes = array(
+    "Americano"=>24,
+    "Recalentedo"=>10,
+    "Latte"=>14,
+    "Capuchino"=>30,
+    "Moca"=>22,
+);
+foreach ($tiendita_de_cafes as  $cafe=>$precio) {
+    echo "Actualemente encontre al cafe $cafe \n";
+    if ($cafe=="Latte"){
+        echo "Encontarmos a Latte";
+        break;
+    }
+
+}
+echo "\n";
+Ejemplo con continue 
+
+                                //Resumen de los ciclos
+Personalmente, lo que me ha funcionado para entender mejor la sintaxis de los diferentes 
+lenguajes de programación es comprender que casi todas las palabras reservadas son en inglés, 
+que en español sería como decir:
+
+IF(condition) ==> SI (se cumple esta condición)
+WHILE(condition) ==> MIENTRAS(se cumple esta condición)
+DO … WHILE(condition) ==> HAZ ESTO (…) MIENTRAS(se cumple esta condición)
+FOR ==> PARA(cuando $valor inicia valiendo esto; mientras se cumpla esta condición; modifica $valor para el siguiente ciclo)
+FOREACH($array AS $value) ==> PARA CADA (valor del $arreglo COMO alias del $valor)
+
