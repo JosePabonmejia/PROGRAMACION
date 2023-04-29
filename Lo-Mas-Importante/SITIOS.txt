@@ -1,5 +1,7 @@
 ///PARA MANIPULAR EL DOM
 https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML
+https://htmlreference.io //Etiquetas HTML
+
 
 ///PARA IMAGENES 
 DESCARGAR-IMAGENES 
@@ -16,7 +18,7 @@ https://www.verexif.com/ //Elimina metdatos
 
 https://www.cdnfonts.com/ //chingonas 
 https://fonts.google.com/ //Fondos mas seguros 
-
+https://www.eniun.com/atributos-propiedades-textos-css/ //Guia para Css
 ///PARA IMPUTS GUIAS HTML CSS ETC
 
 https://www.w3schools.com/html/html_form_input_types.asp

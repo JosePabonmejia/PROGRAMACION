@@ -1,0 +1,923 @@
+                                       INTRODUCCION          
+¿Qué es HTML?
+El Lenguaje de Marcado de Hipertexto o HTML por sus siglas en inglés (HyperText Markup Language)
+es el código para construir la estructura de una página web.
+En otras palabras, HTML es el esqueleto con el cual definimos cada elemento que compone la página 
+web, así como: enlaces, párrafos, títulos, botones, imágenes, formularios, entre otros.
+¿Qué es CSS?
+El lenguaje de Hojas de Estilos en Cascada o CSS por sus siglas en inglés (Cascade Style Sheets)
+es el código para describir la presentación de los elementos de la página web, los que definimos 
+con HTML.
+Para qué sirven las herramientas del navegador?
+Las herramientas del navegador son importantes para visualizar lo que ocurre con el código generado. 
+Entre una de la opciones está identificar los elementos que están estructurados en la página web con 
+sus respectivos estilos.
+
+Las herramientas de desarrollador se despliegan con la combinación de teclas F12 / Ctrl + Shift + I 
+/ Cmd + Opt + I o clic derecho e “Inspeccionar” en tu navegador preferido (se recomienda Google Chrome).
+
+¿Cuáles son los motores del navegador?
+Los navegadores tienen sus propios motores: 
+Chrome - Blink, Edge - Edge HTML, Safari - Webkit y Firefox - Gecko. 
+Todos realizan esta compilación de manera diferente, pero con el mismo resultado, es decir, 
+convierten los archivos a píxeles.
+
+Proceso de renderizado del motor del navegador
+El motor del navegador realiza 5 pasos o procesos para compilar nuestro código hasta el renderizado por pantalla. 
+Estos pasos son los siguientes:
+
+Transforma los archivos a un árbol de objetos HTML o CSS, estos se denominan DOM (Document Object Model) y CSSDOM (Cascade Style Sheet Object Model), 
+respectivamente. Cada nodo en el árbol es una representación de los elementos que contiene el archivo HTML o CSS.
+Calcula el estilo correspondiente a cada nodo del DOM relacionado al CSSDOM.
+Calcula las dimensiones de cada nodo y dónde va en la pantalla.
+Pinta o renderiza los diferentes elementos como cajas o contenedores.
+Agrupa todas las cajas en diferentes capas para convertirlas en una imagen que se renderiza en pantalla.
+                                         
+                                          ANATOMIA DE HTML
+¿Cuáles son los elementos HTML?
+Los elementos son cada una de las partes que conforman un archivo HTML. Su estructura contiene:
+
+Etiquetas: es la representación de un elemento HTML. Se dividen en etiquetas de apertura, representadas por <etiqueta>
+y etiquetas de cierre, representadas por </etiqueta>.
+Contenido: es el texto o elementos encerrados por la etiqueta, este valor es opcional en algunas de ellas.
+
+Qué son atributos HTML
+Los atributos HTML son propiedades en la etiqueta de apertura que manejan el comportamiento del elemento. 
+Su valor está envuelto en comillas.
+
+Qué son los elementos vacíos
+Los elementos vacíos son aquellos que únicamente se representan en una etiqueta de apertura. Por ejemplo, 
+la etiqueta de imagen: <img...>.
+
+Qué es el anidamiento de elementos
+El anidamiento de elementos HTML consiste en envolver varias etiquetas en otras etiquetas.
+Interpreta a cada elemento HTML como una caja donde puedes guardar diferentes elementos u otras cajas. 
+Estas cajas tendrán diferentes tamaños y estarán colocadas junto a otras.
+
+Aquellas etiquetas que envuelven a otras se las denomina “padres”. Es decir, <section> es padre de <h1>, <p>, <ul>, 
+y a su vez <ul> es padre de 3 etiquetas <li>.
+Las etiquetas que son el contenido de otras, se las denomina “hijos”. Es decir, las etiquetas <h1>, <p>, <ul> 
+son hijos de <section>, y a su vez las etiquetas <li> son hijos de <ul>.
+
+                              Estructura básica de un documento HTML
+La estructura básica de un documento HTML está configurado por las siguientes etiquetas principales:
+Etiqueta Doctype
+La etiqueta <!DOCTYPE html> especifica que el archivo se maneje con la versión 5 de HTML.
+
+Etiqueta html
+La etiqueta <html> define el elemento raíz de un documento HTML. Todos los demás elementos deben estar contenidos dentro 
+de este elemento raíz. En esta etiqueta se especifica el lenguaje de la página web mediante la propiedad lang.
+
+Etiqueta head
+La etiqueta <head> define la metainformación, es decir, toda información que no es contenido como tal de la página web. 
+Por ejemplo, los enlaces a archivos CSS y JavaScript, el título y la imagen que aparecen en la pestaña del navegador. 
+Esto es importante para motores de búsqueda como Google.
+
+Etiqueta body
+La etiqueta <body> define el contenido de la página web. Debe ser hijo cercano de <html> y padre de todas las etiquetas 
+HTML, excepto por aquellas que definan metainformación.
+
+Comentarios de HTML
+Los comentarios de HTML consiste en señalar algo que se ignorará. Para establecer un comentario HTML se lo envuelve 
+entre <!-- y -->, independiente de la cantidad de líneas.
+
+                                            ¿Qué es HTML semántico?
+El HTML semántico consiste en que cada elemento tenga su propia etiqueta que lo defina correctamente. 
+Sin utilizar etiquetas muy generales, como <div> o <span>.
+
+El problema con la etiqueta div
+La etiqueta div define un bloque genérico de contenido, que no tiene ningún valor semántico. 
+Se utiliza para elementos de diseño como contenedores.  
+
+
+¿Cuáles son las etiquetas semánticas?
+
+Las etiquetas semánticas para definir una interfaz de una página web son:
+
+<header>: define el encabezado de la página (no confundir con <head>).
+<nav>: define una barra de navegación que incluye enlaces.
+<section>: define una sección de la página.
+<footer>: define un pie de página o de sección.
+<article>: define un artículo, el cual puede tener su propio encabezado, navegación, sección o pie de página.
+Ahora que ya conoces las etiquetas semánticas, evita el uso excesivo de <div>.
+
+                                          ETIQUETAS HTML MAS USADAS
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas mas utilizasdas</title>
+</head>
+<body>
+    <!-- LAYOUT Osea diceño de toda la pagina-->
+    <header></header><!-- Cabeza -->
+    <main></main><!-- Parte mas importante -->
+    <nav></nav><!-- Navegador -->
+    <section></section><!-- seccion -->
+    <article></article><!-- Article -->
+    <aside></aside><!--  -->
+    <footer></footer><!-- Comentarios -->
+    <!-- ENLACES -->
+    <a href=""></a><!-- Para muestra un valor texto y puede ser seleccionado con click -->
+    <!-- TEXTOS --> 
+    <h1>Soy un titulo</h1>
+    <p>Soy un parrafo</p>
+    <span>Soy un span </span><!-- Se utiliza mas con metodos de trasferencia de datos al parrafo que queremos-->
+     <!-- IMAGENES Y VIDEO  -->
+     <img src="" alt="">
+     SVG
+     <iframe src="" frameborder="0"></iframe>
+     <video src=""></video>
+     <!-- FORMULARIOS -->
+     <form action="">
+        <label for="Name"></label>
+            <input type="Name">
+        
+     <button></button>
+     </form>
+     <!-- LISTAS -->
+     <ul></ul>
+     <li></li><!-- Lista desordenada -->
+     <ol></ol><!-- Lista ordenada -->
+</body>
+</html>
+
+                       Anatomía de una declaración CSS: selectores, propiedades y valores
+Qué es una declaración de CSS
+Una declaración de CSS es un bloque que especifica el conjunto de estilos que se añadirán a un elemento HTML. 
+Su estructura contiene lo siguiente:
+                       
+Selector: define el elemento o conjunto de elementos a los cuales se añadirán los estilos.
+Propiedad: es el nombre del estilo de CSS.
+Valor: es el valor que tomará la propiedad.
+
+Qué son comentarios de CSS
+Los comentarios de CSS consisten en señalar algo que se ignorará. Para establecer un comentario CSS se lo envuelve entre 
+/* y */, independiente de la cantidad de líneas.
+
+Propiedades iniciales de CSS
+Antes de empezar con CSS utilizaremos algunas propiedades de CSS.
+
+color: establece el color del texto de un elemento.
+background-color: establece un color de fondo al elemento.
+font-size: establece el tamaño de la fuente.
+width: establece la anchura de un elemento.
+height: establece la altura de un elemento.
+Medidas iniciales
+Estas son las medidas iniciales que debes conocer para establecer tamaños de elementos o de tipografía:
+
+px: establece una longitud de píxeles.
+%: establece un porcentaje con respecto a una medida base.
+
+                                               SELECTORES BASICOS
+De tipo  <div>
+De clase .elemento{}
+De ID #id-elemento{}
+De atributo a[href="...."]{}
+Universal *{....}
+
+                                            SLECTORES COMBINADORES
+Descendiente  Div p{}
+Hijo directo  Div > p{}
+Elemento adyacente Div + p{}
+General de hermanos Div ~ p{} 
+
+Cuáles son los selectores combinadores
+Un selector combinador es la unión de dos o más selectores básicos.
+
+1. Combinador de descendientes
+Selecciona todos los elementos del selector de la derecha que son hijos del selector de la izquierda, 
+independientemente de la profundidad. Estos selectores están separados por un espacio.
+
+padre hijos {
+    /* Todos los hijos del padre */
+}
+
+div p{
+    /* Todos los hijos <p> de <div>*/
+}
+
+.container img{
+    /* Todos los hijos <img> de la clase "container"*/
+}
+2. Combinador de hijo directo
+Selecciona todos los elementos del selector de la derecha que son hijos directos del selector de la izquierda. 
+Estos selectores están separados por >.
+
+padre > hijos_directos {
+    /* Todos los hijos directos del padre */
+}
+
+div > p{
+    /* Todos los hijos directos <p> de <div>*/
+}
+
+.container > img{
+    /* Todos los hijos directos <img> de la clase "container"*/
+}
+
+3. Combinador de elemento adyacente
+Selecciona todos los elementos del selector de la derecha que están adyacente al selector de la izquierda. 
+Estos selectores están separados por +.
+elemento + adyacente {
+    /* Elementos adyacentes */
+}
+
+div + p{
+    /* Todos los <p> adyacentes a <div>*/
+}
+
+.container + img{
+    /* Todos los <img> adyacentes a la clase "container"*/
+}
+Adyacente significa que comparten el mismo padre y está situado inmediatamente hacia abajo de otro elemento. 
+Por ejemplo, en el siguiente código, <div> está adyacente a <h1> y <p> está adyacente a <div>. Sin embargo, 
+    <h1> no está adyacente a <div> y <div> no está adyacente a <p>.
+<!--archivo HTML -->
+<h1>Soy un título </h1>
+<div>Soy un div</div>
+<p>Soy un párrafo</p>
+
+4. Combinador general de hermanos
+Selecciona todos los elementos del selector de la derecha que son hermanos del selector de la izquierda.
+Estos selectores están separados por ~.
+elemento ~ hermanos {
+    /* Elementos hermanos */
+}
+
+div ~ p{
+    /* Todos los <p> hermanos de <div>*/
+}
+
+.container ~ img{
+    /* Todos los <img> hermanos de la clase "container"*/
+}
+Hermanos significa que comparten el mismo padre y están situados hacia abajo de otro elemento. Por ejemplo, 
+en el siguiente código, <div> y <p> son hermanos de <h1>, pero <h1> no es hermano de <div> y <p>.
+    <!--archivo HTML -->
+<h1>Soy un título </h1>
+<div>Soy un div</div>
+<p>Soy un párrafo</p>
+
+                                 Cuáles son las pseudoclases
+Una pseudoclase define el estilo de un estado especial de un elemento.
+Sintaxis
+selector : pseudoclase { 
+    propiedad: valor;
+}
+:hover
+Representa el estado en el cual el cursor está encima del elemento.
+Ejemplo:
+<html><div>Señálame</div></html>
+CSS:div {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+  div:hover {
+    color: red;
+  }
+
+:active
+Representa el estado de un elemento que no ha sido visitado.
+Ejemplo:
+<html><a href="#">Clickeame</a></html>
+CSS:a {
+    font-size: 3rem;
+  }
+  a:link {
+    color: red;
+  }
+
+:visited
+Representa el estado de un elemento que ya ha sido visitado.
+Ejemplo:
+<html><a href="#">Clickeame</a></html>
+CSS:a {
+    font-size: 3rem;
+  }
+  a:visited {
+    color: red;
+  }
+
+:not()
+Representa el estado en el cual no coinciden los selectores que se indiquen.
+Ejemplo:
+<html><div>Azul</div>
+<div>Azul</div>
+<div class="negro">Negro</div>
+<div>Azul</div>
+<div>Azul</div></html>
+CSS:div {
+    font-size: 3rem;
+  }
+  
+  div:not(.negro) {
+    color: blue;
+  }
+
+:nth-child()
+Representa el estado en el cual coinciden los hijos del elemento según el valor indicado.
+Ejemplo:
+<html><div>1 Negro</div>
+<div>2 Azul</div>
+<div>3 Negro</div>
+<div>4 Negro</div>
+<div>5 Negro</div></html>
+CSS:div {
+    font-size: 3rem;
+  }
+  
+  div:nth-child(2) {
+    color: blue;
+  }
+
+Valores de palabras clave:
+
+odd: los elementos hijos en posiciones impares.
+even: los elementos hijos en posiciones pares.
+Fórmula matemática: An+B donde A y B son números enteros.
+
+Cuáles son los pseudoselementos
+Un pseudoelemento define el estilo de una parte específica de un elemento.
+Sintaxis
+selector :: pseudo-elemento { 
+    propiedad: valor;
+}
+
+::before
+Sirve para agregar un contenido antes del elemento. El contenido es agregado mediante la propiedad content de CSS.
+
+Ejemplo:
+<html><h1>Título</h1>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+<h2>Subtítulos</h2>
+</html>
+CSS:h2:before {
+    content: " * ";
+    color: red;
+  }
+
+::after
+Sirve para agregar un contenido después del elemento. El contenido es agregado mediante la propiedad content de CSS.
+
+Ejemplo:
+<html><!-- Navbar improvisada -->
+<nav>
+  <ul>
+    <li>Home</li>
+    <li>Destacados</li>
+    <li>Elementos</li>
+    <li>Clases</li>
+    <li>Más...</li>
+  </ul>
+</nav>
+</html>
+CSS:nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  
+  nav ul li::after {
+    content: "|";
+    margin: 1rem;
+    color: red;
+  }
+
+::first-letter
+Sirve para añadir estilos a a la primera letra del texto de cualquier elemento.
+
+Ejemplo:
+<html><p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p>
+<p>Soy otro párrafo</p></html>
+CSS:::first-letter{
+    color: red;
+  }
+                                        Cascada y especificidad en CSS  
+En algún punto, cuando estés creando una página web, te encontrarás con problemas con los estilos, por ejemplo:
+
+¿Por qué no se aplica el color que le estoy poniendo?
+¿Por qué este elemento se comporta de manera diferente?
+Probablemente, sea un inconveniente de cascada o especificidad.
+                                        
+Qué es la cascada en CSS
+La cascada es el concepto que determina qué estilos se colocan sobre otros, priorizando a aquellos que se encuentren más 
+abajo del código. Recordarás que CSS es la abreviación de Cascade Style Sheets, que traducido es hojas de estilos en 
+Cascada.
+<h1>Cascada</h1>
+h1 {
+    color: red;
+}
+
+h1 {
+    color: blue;
+}
+
+La etiqueta <h1> tendrá un color blue de letra, esto porque está situado más abajo en el código. 
+Esto ocurre con cada propiedad de CSS que se repita en algún punto más arriba del código.
+
+Sin embargo, esto ocurre cuando la especificidad de una regla CSS tiene el mismo valor. Pero, ¿qué es especificidad?
+
+Qué es especificidad en CSS
+
+La especificidad consiste en dar un valor a una regla CSS sobre qué tan específico es el estilo, esto para que los navegadores 
+puedan saber qué estilos aplicar sobre otros, independientemente de dónde se encuentren en el código. 
+El estilo se aplicará donde la especificidad sea mayor.
+
+Tipos de especificidad en CSS
+
+Existen 6 tipos de especificidad con su respectivo valor, donde X es la cantidad de estilos que lo contienen. 
+
+10000 IMPORTANT 
+ 1000 Estilos en linea 
+  100 #id 
+   10 Clases, Atributos y pseudoclases
+    1 Elementos y pseudoelementos 
+    0 Selector universal 
+
+                              Tipos de display más usados: block, inline e inline-block
+La propiedad display establece el tipo de visualización de los elementos HTML sin afectar el flujo normal de los elementos.
+Existen etiquetas que por defecto su display ya está determinado, como la etiqueta <div> que tiene display block, <span> tiene display inline y <button> tiene display inline-block.
+
+    Abordaremos los tipos de display block, inline e inline-block a continuación.
+    
+Visualización en bloque (block)
+    El display block **establece que un elemento ocupará todo el espacio disponible por defecto y el siguiente elemento a este se situará por debajo.
+    
+    Es posible añadir medidas de anchura width y altura height a estos a elementos.
+    
+    También es posible agregar todas las propiedades del modelo de caja (no te preocupes de este concepto, ya lo abordaremos).
+Ejemplo 
+<HTML>
+    <div>Soy display block</div>
+<div>Soy display block</div>
+<div class="con_medidas">Soy display block</div>
+</HTML>
+CSS:/* Quita los comentarios y observa el comportamiento */
+div{
+  background-color: aqua;
+  /* margin: 10px; */
+  /* padding: 10px; */
+}
+
+.con_medidas {
+  /* width: 200px; */
+  /* height: 200px; */
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  font-size: 1.2rem;
+  margin: 0;
+}
+Visualización en línea (inline)
+El display inline establece que un elemento ocupará el espacio del contenido del mismo y el siguiente elemento se situará 
+a la derecha.
+
+No es posible añadir medidas de anchura width y altura height a estos a elementos.
+
+También, no es posible agregar todas las propiedades del modelo de caja, únicamente funcionará la propiedad margin en 
+el eje horizontal (no te preocupes de este concepto, ya lo abordaremos).
+<html><span>Soy display inline</span>
+<span>Soy display inline</span>
+<span>Soy display inline</span>
+<span>Soy display inline</span>
+<span class="con_medidas">Soy display inline</span>
+</html>
+CSS:/* Quita y agrega los comentarios y observa el comportamiento */
+span{
+  background-color: aqua;
+  /* margin: 20px; */
+  /* padding: 20px; */
+}
+
+.con_medidas {
+  /* width: 200px; */
+  /* height: 200px; */
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+Visualización de bloque y línea (inline-block)
+El display inline-block combina las ventajas de bloque de colocar medidas al elemento y propiedades del modelo de caja 
+correctamente; con las ventajas de inline de color un elemento seguido de otro en el mismo espacio.
+
+Si elemento excede el contenido total, se coloca en la siguiente línea por debajo.
+<html><button>Soy display inline-block</button>
+<button>Soy display inline-block</button>
+<button>Soy display inline-block</button>
+<button>Soy display inline-block</button>
+<button class="con_medidas">Soy display inline-block</button>
+
+</html>
+CSS: /* Quita los comentarios y observa el comportamiento */
+button{
+  /* margin: 10px; */
+  /* padding: 10px; */
+}
+
+.con_medidas {
+  /* width: 300px; */
+  /* height: 100px; */
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  font-size: 1.1rem;
+  margin: 0;
+}
+Visualización nula (none)
+El display none desactiva la visualización de un elemento, como si el elemento no existiera.
+<html><div></div>
+<div></div>
+<div class="desaparecer">
+  En mi siguiente truco, ¡voy a desaparecer!
+</div>
+<div></div>
+<div></div>
+</html>
+CSS: /* Quita los comentarios y observa el comportamiento */
+.desaparecer{
+  /* display: none; */
+  background-color: cornflowerblue;
+  
+}
+
+/* Ignora estos estilos, por ahora */
+* {
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+body{
+  display: flex;
+}
+
+div{
+  background-color: coral;
+  width: 120px;
+  height: 120px;
+  font-weight: 800;
+  padding: 8px;
+}
+                                                flexbox y CSS grid
+El display flex y grid son formas de visualización de elementos recientes y cada uno tienen sus propias características 
+para crear interfaces de manera efectiva, a partir de un contenedor padre que dotará a los elementos hijos de 
+superpoderes del posicionamiento.
+
+Ambas son herramientas muy útiles en el desarrollo, especialmente para la creación de interfaces amigables al usuario 
+y aptas para cualquier dispositivo, que este último se lo conoce como responsive design.
+
+Sin embargo, ambas herramientas tienen temas muy extensos de entender, y como mi intención no es estresarte con demasiada 
+información, simplemente ten presente de manera general en qué consisten.
+
+Qué es flexbox
+Flexbox consiste en el ordenamiento de elementos hijos en un solo eje, por defecto horizontalmente. 
+El elemento padre o contenedor deberá contener la propiedad display con el valor flex. A partir de aquí, 
+ya puedes ordenar los hijos según sea necesario.
+
+<html><div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  
+  </html>
+CSS: * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Quita los comentarios y observa el comportamiento */
+  .container{
+    /* display: flex; */
+  }
+  
+  .container div {
+    width: 100px; 
+    height: 100px;
+  }
+  
+  .container div:nth-child(2n){
+    background-color: aqua;
+  }
+  
+  .container div:nth-child(2n+1){
+    background-color: brown;
+  }
+  
+  Qué es grid
+  Grid consiste en el ordenamiento de elementos hijos en dos ejes, como si fuera una cuadrícula o tabla. 
+  El elemento padre o contenedor deberá contener la propiedad display con el valor grid y debes definir las medidas de 
+  las columnas y de las filas. A partir de aquí, ya puedes ordenar los hijos según sea necesario.  
+
+  <html><div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div></html>
+  CSS: * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Quita los comentarios y observa el comportamiento */
+  .container{
+  
+    /*display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px; */
+    
+  }
+  .container div {
+    width: 100px; 
+    height: 100px;
+  }
+  .container div:nth-child(2n)//ELEMENTOSPARES{
+    background-color: aqua;
+  }
+  .container div:nth-child(2n+1)//ELEMENTOS IMPARES{
+    background-color: brown;
+  }
+
+  Modelo de caja 
+  Si entras a las herramientas de desarrollador de tu navegador y señalas un elemento HTML, en la sección de 
+  estilos te aparecerá una vista parecida a la anterior imagen, este es el modelo de caja del elemento señalado.
+  
+  Si entras a las herramientas de desarrollador de tu navegador y señalas un elemento HTML, en la sección de 
+  estilos te aparecerá una vista parecida a la anterior imagen, este es el modelo de caja del elemento señalado.
+  
+  div {
+    width: 100px;
+    height: 100px;
+}
+
+Qué son los bordes del elemento HTML
+El border consiste en el perfil o borde de un elemento HTML. Si imaginamos una caja, sería la caja en sí. 
+Para definir un borde es necesario utilizar las siguientes tres propiedades:
+
+border-color: establece el color del borde.
+border-style: establece el estilo propio del borde, estos pueden ser: none (sin borde), dotted (puntos), 
+dashed (guiones), solid (continuo), double (doble continuo), groove (recuadro).
+border-width: estable la anchura del borde.
+También se puede establecer los tres valores en una sola propiedad border donde no importa el orden.
+
+div {
+    border: [color] [style] [width];
+}
+
+div {
+    border-color: red;
+    border-style: solid;
+    border-width: 1px;
+}
+
+También estableciendo de manera individual los valores de cada posición:
+div {
+    border-top: 5px solid blue;
+    border-bottom: 5px solid red;
+    border-left: 5px solid black;
+    border-right: 5px solid yellow;
+  }
+  Qué es el espaciado interno del elemento HTML o padding
+El padding consiste en el espacio entre el borde y el contenido del elemento HTML. Si imaginamos una caja,
+ este valor sería el espacio entre la caja y lo que deseas guardar.
+ div {
+    padding: 100px;
+}
+Puedes establecer el padding en cada posición en una sola línea de las siguientes maneras:
+
+padding: [arriba] [derecha] [abajo] [izquierda], siguiendo el sentido horario.
+padding: [arriba] [derecha e izquierda] [abajo], siguiendo el eje principal.
+padding: [arriba y abajo] [derecha e izquierda], siguiendo los ejes del elemento.
+También estableciendo de manera individual los valores de cada posición:
+div {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+Qué es el espaciado externo del elemento HTML o margin
+El margin consiste en el espacio entre el borde y otro elemento HTML. Si imaginamos una caja, 
+es el espacio entre tu caja y otra caja.
+div {
+    margin: 10px;
+}
+Puedes establecer el margin en cada posición en una sola línea de las siguientes maneras:
+
+margin: [arriba] [derecha] [abajo] [izquierda], siguiendo el sentido horario.
+margin: [arriba] [abajo] [derecha e izquierda], siguiendo el eje principal.
+margin: [arriba y abajo] [derecha e izquierda], siguiendo los ejes del elemento.
+También estableciendo de manera individual los valores de cada posición:
+
+div { margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+Qué son los valores por defecto
+Por defecto, el navegador establece valores iniciales a algunas propiedades CSS, este es el caso de margin y 
+padding. Una buena práctica es utilizar el selector universal para restablecer estos valores a 0, para que no 
+surjan errores inesperados.
+
+* {
+    margin: 0;
+    padding: 0;
+}
+Qué es el tamaño total del elemento
+El tamaño total del elemento está determinado por la suma de los valores de las propiedades border padding y 
+widtho height, dependiendo del eje. La propiedad margin no está incluida en este cálculo.
+
+Por ejemplo, definimos los siguientes estilos:
+
+div{
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  border: 10px solid gray;
+  margin: 30px;
+}
+
+El tamaño total del elemento será de 210px en ambos ejes, donde la suma fue: 150 (altura/anchura) + 20 x 2 
+(padding ambos lados) + 10 x 2 (borde ambos lados). Si evaluamos este elemento en las herramientas del 
+desarrollador mostrará su tamaño como 210x210.
+
+Medidas totales de un elemento HTML
+Aunque se conozca las medidas de los elementos de esta manera, no siempre existirá un control total.
+ Por lo que podríamos establecer el tamaño total del elemento con width y height, y no solo del contenido, añadiendo la propiedad box-sizing.
+
+Propiedad box-sizing
+La propiedad box-sizing establece cómo se calculará el width y el height si incluyen bordes y espacios internos. Como buena práctica, se lo coloca en el selector universal, para que todos los elementos sigan esta tendencia.
+* {
+    box-sizing: border-box;
+  }
+
+  Con el valor border-box, el tamaño total del elemento será igual al especificado en el width y height, provocando que las medidas del contenido cambien con respecto a los bordes y espacios internos.
+
+  Por ejemplo, con los estilos que definimos anteriormente, establezcamos esta nueva propiedad.
+  El tamaño total del elemento será de 150px en ambos ejes, donde se calcularon las medidas del contenido para 
+  que la suma total sea lo especificado en el width y height. Si evaluamos este elemento en las herramientas 
+  del desarrollador mostrará su tamaño total como 150x150 y el contenido como 90x90.
+
+  Conclusión, establece las medidas totales del elemento con width y height, junto con box-sizing: border-box, para que el contenido se adecue a las necesidades del contenedor.
+
+¿Cuál es el problema con el tamaño de los bordes?
+Recapitulando, el tamaño total de un elemento es la suma de tres: el borde, el espacio interior y el contenido.
+
+Entonces, en algunas ocasiones tendrás la intención de añadir un borde al realizar un hover. Esto provocará 
+que el elemento necesite más espacio del inicial, en un contenedor con más elementos puede ocasionar un 
+conflicto.
+
+Mira el siguiente ejemplo, e intenta poner el cursor sobre un elemento ¿qué sucede?
+
+<html><div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+</html>
+css: /* Quita los comentarios y observa lo que ocurre */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  display: inline-block;
+  background-color: greenyellow;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 30px;
+}
+
+div:hover{
+  border: 10px solid gray;
+  cursor: pointer;
+}
+
+Observaste este comportamiento, debes tener cuidado con lo que agregas porque puedes provocar errores.
+
+La solución a esto es colocar un borde de color transparent (transparente) y del mismo tamaño que el otro borde.
+Esto hará que el elemento se mantenga en su tamaño total, lo único que cambia es el color.
+
+<html><div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+<div>Lorem ipsum dolor sit amet consectetur adipisicing eliti</div>
+</html>
+
+css:/* Quita los comentarios y observa lo que ocurre */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div{
+  display: inline-block;
+  background-color: greenyellow;
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 30px;
+  /* border: 10px solid transparent; */
+}
+
+div:hover{
+  border: 10px solid gray;
+  cursor: pointer;
+}
+
+Posicionamiento en CSS
+El posicionamiento en CSS consiste en cómo un elemento se situará, con respecto a su elemento padre y al flujo 
+normal del documento. El flujo normal del documento es el orden de los elementos establecidos en el HTML.
+
+La posición del elemento se la define con la propiedad position, mediante los siguientes valores:
+
+static
+relative
+absolute
+sticky
+
+Propiedades de posición
+Además de la propiedad position, existen cuatro propiedades del elemento de acuerdo a su posición con respecto 
+a su padre, estas son: top (arriba), bottom (debajo), left (izquierda) y right (derecha).
+div {
+  top: 10px;
+  bottom: 15px;
+  left: 20px;
+  right: 10px;
+}
+Estos valores estarán establecidos en el padre próximo que tenga la posición relative.
+
+Si top y bottom están definidos, top gana. Si left y rigth están definidos, left gana (dependiendo el idioma configurado).
+
+Posición estática
+La posición static es el valor por defecto de todo elemento HTML, consiste en respetar el flujo normal del 
+documento donde las propiedades de posición no pueden ser establecidas.
+<html><div class="container">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div></html>
+CSS: * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+
+}
+
+/* Quita los comentarios y observa el comportamiento */
+.container div {
+  width: 100px; 
+  height: 100px;
+/* 
+  top: 10px;
+  bottom: 15px;
+  left: 20px;
+  right: 10px; 
+  */
+}
+
+.container div:nth-child(2n){
+  background-color: aqua;
+}
+
+.container div:nth-child(2n+1){
+  background-color: brown;
+}
+

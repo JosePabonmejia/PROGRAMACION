@@ -1,4 +1,4 @@
-                                    <!-- QUE ES UN ARREGLO -->
+                                <!-- QUE ES UN ARREGLO -->
 Un arreglo es una variable compuesta, o sea una varíale que contiene múltiples valores.
 podemos acceder a esos valores haciendo referencia a sus respectivos subíndices, 
 los subíndices en un arreglo siempre empiezan en cero.
@@ -308,4 +308,56 @@ WHILE(condition) ==> MIENTRAS(se cumple esta condición)
 DO … WHILE(condition) ==> HAZ ESTO (…) MIENTRAS(se cumple esta condición)
 FOR ==> PARA(cuando $valor inicia valiendo esto; mientras se cumpla esta condición; modifica $valor para el siguiente ciclo)
 FOREACH($array AS $value) ==> PARA CADA (valor del $arreglo COMO alias del $valor)
+
+                                              ///Funciones   
+Las funciones son bloques de código que creamos para realizar tareas especificas, cuando hay un proceso 
+repetitivo en tu programa, en lugar de escribir las mismas líneas de código, puedes crear un función y luego 
+invocarla cuantas veces desees.
+PHP tiene funciones predeterminadas que ya podemos llamar (Rand)
+<?php
+
+function get_pokemon (){
+
+    $numero_aleatoreo = rand(1,5);// Funcion predeterminada 
+    switch ($numero_aleatoreo){
+        case 1: 
+            echo "Pikachu";
+            break;// Necesario para romper el ciclo 
+        case 2: 
+            echo "Miu";
+            break;
+        case 3: 
+            echo "Miaw";
+            break;
+        case 4: 
+            echo "Bullbasur";
+            break;
+        default:
+            echo "Lo hay pokemon para ti";
+    }
+}
+get_pokemon();//Invocamos a la funcion
+echo "\n";
+
+                                         ///Parametros en las functiones 
+Los parámetros son los datos que reciben las funciones y que utilizan para realizar las operaciones de esa 
+función. Una función puede recibir cualquier número de parámetros, incluso ninguno.
+
+Queremos que la funcion predeterminada (rand) genere numeros aleatoreos entre 1 y 10: echo rand(1,10);
+
+<?php
+function FuncionAprobacion($notas){
+    if ($notas<51)
+    {
+      echo "Lo siento mucho reprovaste";
+    }
+    else
+    {
+        echo "Felicidades Aprovaste";
+    }
+}
+
+$Introduce=readline("Introduce tu nota: ");
+FuncionAprobacion($Introduce);
+echo "\n";
 

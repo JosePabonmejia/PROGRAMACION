@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex BOX</title>
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+         background-color: coral;
+         display: flex;/* Se crea el flex */
+         height: 500px;
+         justify-content: center;/* Todos los elementos dentro se alinean al centro de izquierda a derecha*/
+         align-items: center; /* Centro de arriba abajo */
+         flex-direction: column;/* Todos los elementos del flex se ponen en columna */
+        /*  */
+    }
+    .container div {
+        background-color: aqua; 
+        width: 100px;
+        height: 100px;
+        
+        
+    }
+    .container :nth-child(2n+1)
+    {
+        background-color: blueviolet;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>FLEXBOX</h1>
+    <div class="container">
+        <div>h</div>
+        <div>h</div>
+        <div>h</div>
+        <div>h</div>
+    </div>
+</body>
+</html>

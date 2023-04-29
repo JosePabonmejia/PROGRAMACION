@@ -1,5 +1,7 @@
+CRTL + Shift + I Menu de extenciones 
 CTRL+C+K COMENTAR EN VISUAL 
 CTRL+C+U QUITAR COMENTARIO
+CTRL+C+J PARA ABRIR LA TERMINAL
 WIN+IZQUIERDA O DERECHA Minimiza pantalla para trabajar en dos perifericos 
 
 Seleccionas la parte que quieres copiar, luego con SHIFT + ALT + FLECHA ABAJO copias todo abajo, presiona la flecha segun cuantas copias quieras realizar.

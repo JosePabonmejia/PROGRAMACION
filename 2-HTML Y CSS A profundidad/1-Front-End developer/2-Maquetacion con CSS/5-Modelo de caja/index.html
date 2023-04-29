@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caja</title>
+    <style>
+        /* Caja */
+       *{
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+        }
+       .container { 
+        display: flex;
+        flex-direction: column;
+        }
+       h1{
+        height: 100px;
+        width: 500px;
+        background-color: crimson;
+        padding: 20px; /* Margen a los lados para centrar etc */
+        box-sizing: border-box;/* Este valor no permite que el padding le agregue tamaño a nuestro objeto */
+        border: 3px solid royalblue;/* Borde para el objeto */
+        margin-top: 100px; /* Matgen invicible  */
+        
+       }
+       /* Para colapso de margenes se debe de utilizar Flexbox   */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HOLA MUNDO</h1>
+        <h1>Nueva caja</h1>
+    </div>
+    </body>
+</html>

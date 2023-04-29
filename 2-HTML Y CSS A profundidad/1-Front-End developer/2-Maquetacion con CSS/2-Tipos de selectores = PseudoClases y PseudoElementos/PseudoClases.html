@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: #ffa443;
+        }
+        h1 {
+
+            color:#89232f;
+        }
+        h1:hover{
+            color: #f96836;
+        }
+       /* Los estilos solo se le aplicaran al segundo elemento */
+        div p:nth-child(2){
+            color: crimson;
+
+        }
+        /* La primera letra de los elementos p seran azules */
+        div p::first-letter{
+            color: rgb(0, 38, 255);
+        }
+        /* Se le agrega un emogy al primer elemento o hijo */
+        div p:nth-child(1)::before
+        {
+            content: "✨";
+        }
+    </style>
+</head>
+<body>
+    <h1>HOLA MUNDO</h1>
+<h1></h1>
+    <div>
+        <p>Hola</p>
+        <p>Que </p>
+        <p>Estas</p>
+        <p>Haciendo</p>
+    </div>
+    
+</body>
+</html>

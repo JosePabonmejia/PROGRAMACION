@@ -1,0 +1,144 @@
+                                                        ////Cliente y servidor
+
+Toda nuestra aplicación esta guardada en un servidor, el cual entrega una copia de la misma a cada cliente que la solicite.
+
+Además, el servidor también se encarga de responder cada solicitud del usuario.
+
+Dominio
+El dominio es nuestra dirección en internet. Gracias a él cualquier computadora es capaz de encontrar páginas web.
+
+Servidor físico o VPS
+Es la computadora que se encarga de guardar tu página web y mantener accesible 24/7. Se le conoce como servidor y siempre está conectado a 
+internet.
+
+A través de él podemos definir ciertas reglas de seguridad para nuestra página.
+
+Servidor web
+Es un programa que corre dentro de nuestro servidor físico y se encarga de gestionar cualquier petición que llegue al mismo.
+
+Esta petición es procesada por algún lenguaje de programación y al final devuelve una respuesta.
+
+                                                            ////Métodos HTTP
+Los métodos HTTP son una forma de comunicación entre el cliente y el navegador. A través de una solicitud HTTP el cliente es capaz de pedirle 
+al servidor que realice una acción
+
+GET
+Este método permite solicitar información al servidor. Por ejemplo, podemos pedirle una lista de productos en el caso de que estemos haciendo 
+un e-commerce o una lista de cursos si tenemos una pagina como Platzi.
+
+POST
+Este método permite guardar información. Por ejemplo, podemos recabar datos del usuario desde un formulario y mandarlos a nuestro servidor para 
+procesarlos.
+
+podríamos guardarlos para armar una base de datos de usuarios o incluso un sistema de login.
+
+PUT/PATCH
+Estos métodos permiten actualizar información ya guardada. Por ejemplo, podemos darle la oportunidad a un usuario de actualizar su correo 
+electrónico o incluso cambiar su contraseña.
+
+La diferencia es que PUT reemplaza toda la información existente y PATCH solo reemplaza lo necesario, es decir, “parcha” la información
+
+DELETE
+Este método lo usamos para eliminar un recurso del servidor. Por ejemplo, podemos usarlo si deseamos eliminar un blogpost o un comentario.
+
+Esto no significa que debamos eliminarlo necesariamente dentro de nuestra base de datos, podemos hacer un “Soft delete”.
+
+                                                                ////Tipos de datos
+En programación tenemos varios tipos de datos, los más conocidos son:
+
+Numéricos:
+Integer: Número sin decimales.
+Float: Número con punto flotante o punto decimal.
+Double: Decimales con valores más precisos, con más decimales que float.
+Cadenas ded caracteres:
+Chart: Un solo una letra o un simbolo.
+String: Una cadena de caracteres.
+Booleanos:
+Bool: Verdadero o falso.
+Sin valor:
+Null: No hay valor.
+Undefined: Hay una variable pero no tiene ningun valor.
+PHP tiene un tipado débil, no necesita que se defina de forma explicita el tipo de dato ya que lo deduce por si mismo.
+
+PHP es capaz de convertir de un tipo a otro de forma automática. Por ejemplo si sumas un número con un string PHP evaluará ambos como números.
+
+//////El Casting es la manera de indicar al interprete de PHP para forzar el cambio de un tipo de dato a otro deseado. Se puede acceder a 
+esta utilidad anteponiendo el tipo de dato entre paréntesis antes de un valor o una variable al momento de la asignación o inicialización.
+
+Las siguientes definiciones ayudan a forzar el cambio de tipos en PHP:
+
+(array) forzado al tipo arreglo
+(bool) forzado al tipo booleano
+(boolean) forzado al tipo booleano
+(double) forzado al tipo ‘punto flotante’
+(float) forzado al tipo ‘punto flotante’
+(int) forzado al tipo entero
+(integer) forzado al tipo entero
+(object) forzado al tipo objeto
+(string) forzado al tipo ‘cadena de texto’
+A continuación, se muestra un par de ejemplos de lo mencionado:
+
+$var_3 = "5";  // string(1) "5"
+$var_4 = (int) $var_3;  // int(5)
+$flag = 1;  // int(1)
+$flag = (bool) $flag;  // bool(true)
+
+                                                             ///OPERADORES LOGICOS 
+Operadores Lógicos
+Son los operadores que nos ayudan a combinar dos o mas afirmaciones para definir si una oración es cierta o falsa. Su uso esta basado en 
+tablas de verdad.
+
+AND (y)
+Se usa para verificar si dos afirmaciones son ciertas, entonces la oración completa es cierta. Si una de ellas es falsa, entonces, 
+la oración completa es falsa.
+
+true AND true = True
+
+false AND true = False
+
+true AND false = False
+
+false AND false = False
+
+Se escribe así:
+
+$valor_1 and $valor_2
+$valor_1 && $valor_2
+OR (o)
+Si una de las 2 afirmaciones es cierta, entonces la oración completa es cierta. Si solo una de ellas es falsa, entonces, la oración completa 
+es cierta.
+
+true OR true = True
+
+false OR true = True
+
+true OR false = True
+
+false OR false = False
+
+Se escribe así:
+
+$valor_1 or $valor_2
+$valor_1 || $valor_2
+NOT (no)
+
+Se usa para invertir el significado de una oración
+
+NOT True ⇒ False
+
+NOT False ⇒ True
+
+                                                            ////Operadores Aritméticos
+Adición ⇒ +
+Sustracción ⇒ -
+Multiplicación ⇒ *
+División ⇒ /
+Modulo ⇒ % ⇒ Se usa para conocer el residuo de una división ⇒ $a % $b
+Potenciación ⇒ ** ⇒ $a ** $b
+Identidad ⇒ Sirve para convertir un string a un int o float, según sea el caso ⇒ + ⇒ +$a
+Negación ⇒ Convierte un numero positivo a negativo ⇒ -$a
+
+///PRECEDENCIA 
+La Precedencia de Operadores nos sirve para decidir qué pasará?, en qué orden?, cuando estamos programando. Para que funcione primero 
+incializamos la variable y luego le asignas la funcion que debe realizar, es decir, por ejemplo, primero le das le valor de cero a la variable 
+y luego le dices que le sume 1 cada vez que haga un ciclo

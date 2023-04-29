@@ -8,6 +8,8 @@ Borrar archivos : rm vacio.txt
 $ pwd: saber donde estamos 
 $ ls : listado 
 $ ls -al : listado especifico que muestra hasta documentos ocultos  
+$ mkdir:Crea una carpeta
+$ touch :Crea un archivo
 
 $ git config --global user.email "ejemplo@gmail.com"
 

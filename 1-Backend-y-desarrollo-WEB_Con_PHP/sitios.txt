@@ -1,0 +1,1 @@
+https://www.php.net/manual/es/functions.user-defined.php para funciones predeterminadas

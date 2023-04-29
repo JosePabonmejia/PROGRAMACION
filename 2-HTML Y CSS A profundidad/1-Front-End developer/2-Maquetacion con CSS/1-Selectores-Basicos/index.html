@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Styles.css">
+    <title>selectores</title>
+    <style>
+    /* SELECTORES BASICOS */
+            /* Selector Universal */
+            *{
+            box-sizing: border-box;/* Sirve para que el borde se ajuste a la pantalla del usuario*/
+            padding: 0%;/*Iniciamos con todo en 0*/
+            margin: 0%;
+            background-color: rgb(14, 122, 122);
+            color: aliceblue;
+            }   
+            
+            /* Selector por Tipo*/
+            h1 {
+                color: rgb(245, 6, 6);
+            }
+            /* Selector por id */
+            #h2{
+                color: blueviolet;
+            }
+            /* Selector por clase */
+            .parrafo{
+                color: chartreuse;
+            }            
+        /* SELECTORES COMBINADOS */
+            /* Selector Decendiente */
+            div p {
+               color: aqua;
+            }
+            /* Selector Hijo directo */
+            div > div {
+                color: red;
+            }
+    </style>
+</head>
+<body>
+    <h2>Selectores Basicos</h2>
+    <h1>HOLA SOY UN h1 Selector por tipo</h1>
+    <h2 id="h2">HOLA SOY UN TITULO Selector por id</h1>
+    <p class="parrafo">HOLA SOY UN PARRAFO Selector por clase</p>
+
+    <h3>Selectores combinados</h3>
+    <h3>Decendiente</h3>
+    <div>
+        <p>SOY UN HIJO P</p>  
+        <P>yo tambien h4</P>
+        <P>Y yo DIV</P>
+    </div>
+    <h3>Hijo directo</h3>
+    <div>
+        <div>Soy un hijo directo</div>
+        <p>Yo NO</p>
+        <h4>yo tampoco</h4>
+    </div>
+    
+</body> 
+</html>
