@@ -921,3 +921,915 @@ CSS: * {
   background-color: brown;
 }
 
+Posición relative
+La posición relative consiste en respetar el flujo normal del documento donde las propiedades de posición sí pueden ser 
+establecidas.
+<html>
+  <div class="container">
+    <div class="relative"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+}
+
+.container div {
+  width: 100px; 
+  height: 100px;
+}
+
+/* Quita los comentarios y observa el comportamiento */
+.container .relative{
+  /* position: relative; */
+  /* top: 50px; */
+  /* left: 50px; */
+}
+
+.container div:nth-child(2n){
+  background-color: aqua;
+}
+
+.container div:nth-child(2n+1){
+  background-color: brown;
+}
+
+Posición absoluta
+La posición absolute consiste en quitar al elemento del flujo normal del documento donde las propiedades de posición 
+sí pueden ser establecidas.
+
+En el siguiente ejemplo, observa que pasa con el primer elemento con respecto a los demás.
+
+<html>
+  <div class="container">
+  <div class="absolute">1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+
+/* Importante el position */
+.container{
+  position: relative;
+  width: 100%;
+}
+
+.container div {
+  width: 100px; 
+  height: 100px;
+}
+
+/* Quita los comentarios y observa el comportamiento */
+.container .absolute{
+  /* position: absolute; */
+  /* left: 150px; */
+  /* top: 50px; */
+}
+
+.container div:nth-child(2n){
+  background-color: aqua;
+}
+
+.container div:nth-child(2n+1){
+  background-color: brown;
+}
+
+Habrás notado que el elemento “2” desaparece, pero en realidad lo que sucede es que sitúa por detrás del elemento con posición 
+absoluta que salió del flujo normal del documento. Este comportamiento se debe al eje Z de la pantalla y al contexto de 
+apilamiento.
+
+Elemento padre más próximo con posición relativa
+El elemento con posición absoluta se desplazará arriba, abajo, izquierda o derecha con respecto al elemento padre más próximo 
+con posición relativa.
+
+Si no existe un padre con posición relativa de un elemento con posición absoluta, este se desplazará con respecto al elemento 
+raíz del documento.
+
+En el siguiente ejemplo, te encontrarás varios contenedores padres, incluso las etiquetas <html> y <body>. Sigue los pasos y
+observa el comportamiento. Ignora los estilos iniciales, simplemente sirven para establecer la estructura del ejercicio.
+<html>
+  <p>Body</p>
+<div class="abuelo">
+  <p>Abuelo</p>
+  <div class="padre">
+    <p>Padre</p>
+    <div class="hijo">
+      <p>Hijo</p>
+    </div>
+  </div>
+</div>
+</html>
+CSS
+/* El ejercicio está hasta abajo */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+html{
+  margin: 20px;
+  border: 1px red solid;
+}
+
+body {
+  margin: 20px;
+  background-color: wheat;
+  border: 1px black solid;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+
+}
+
+.abuelo{
+  width: 100%;
+  height: 100vh;
+  background-color: yellowgreen;
+}
+
+.padre{
+  width: 75%;
+  height: 75%;
+  background-color: cadetblue;
+}
+
+.hijo{
+  width: 150px;
+  height: 150px;
+  background-color: rosybrown; 
+}
+
+
+/* Lo único que quiero que entiendas es que hay 3 contenedores, los cuáles 
+/* Quita los comentarios y observa el comportamiento */
+
+
+.hijo {
+  /* position: absolute; */
+  /* top: 0; */
+}
+
+/* ¿ Por qué sucedió esto ? */
+
+html {
+  /* position: relative; */
+}
+
+body {
+  /* position: relative; */
+}
+
+.abuelo{
+  /* position: relative; */
+}
+
+.padre {
+  /* position: relative; */
+}
+
+/* ¿ Ahora entendiste ? */
+
+Como pudiste observar, en el elemento con posición absoluta, su desplazamiento se basa con relación al elemento padre más 
+próximo con posición relativa.
+
+Posición fija
+La posición fixed consiste en quitar al elemento del flujo normal del documento y fijarlo en un lugar; donde las propiedades
+de posición sí pueden ser establecidas.
+
+En el siguiente ejemplo, desplázate por el documento, observa el comportamiento antes y después de colocar la posición fija.
+
+<html>
+  <nav>De grande quiero ser una barra de navegación</nav>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+<p>Soy un párrafo, baja por favor</p>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+/* Desplázate por el documento y después quita los comentarios y observa el comportamiento */
+
+nav {
+  /* position: fixed; */
+  /* top: 0; */
+  background-color: cornflowerblue;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+p {
+  padding: 10px;
+}
+Posición variable fija
+La posición sticky consiste en quitar al elemento del flujo normal del documento y fijarlo en un lugar mientras su contenedor 
+sea visible; donde las propiedades de posición sí pueden ser establecidas.
+
+En el siguiente ejemplo, desplázate por el documento, observa el comportamiento antes y después de colocar la posición variable 
+fija.
+<html>
+  <div>
+    <p>Soy un párrafo 1</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 2</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 3</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 4</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 5</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 6</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 7</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 8</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 9</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+    <p>Soy un párrafo 10</p>
+    <ul>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+      <li>Elemento 4</li>
+      <li>Elemento 5</li>
+      <li>Elemento 6</li>
+      <li>Elemento 7</li>
+      <li>Elemento 8</li>
+      <li>Elemento 9</li>
+      <li>Elemento 10</li>
+    </ul>
+  </div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+/* Desplázate por el documento y después quita los comentarios y observa el comportamiento */
+
+p {
+  /* position: sticky; */
+  /* top: 0; */
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+
+li {
+  margin: 20px 30px;
+}
+
+Z-index y el contexto de apilamiento
+Qué son los planos y ejes
+El navegador está constituido de tres planos y ejes: el ancho o X; el alto o Y; y el de profundidad o Z.
+
+El eje X positivo está hacia la derecha; el eje Y positivo está hacia abajo; y el eje Z positivo está hacia el usuario.
+Qué es la propiedad z-index
+El contexto de apilamiento se configura con la propiedad z-index.
+
+Por defecto, todos los elementos tienen un valor auto, es decir, el orden está definido por la estructura del HTML. 
+Los primeros elementos estarán detrás y los últimos estarán de frente.
+
+Si se establece un valor positivo, este elemento se sitúa por delante de los demás. Si se establece un valor negativo, 
+se sitúa por detrás.
+
+Si un elemento tiene un z-index mayor a otro, estará por delante. Sin embargo, si un elemento que tiene un z-index menor a otros, 
+sus hijos nunca estarán por encima, aunque su z-index sea mayor.
+
+<html>
+  <div class="red">Red</div>
+<div class="blue">Blue
+  <div class="yellow">
+    Yellow (hijo de blue)
+  </div>
+</div>
+</html>
+CSS
+/* Quita los comentarios y observa el resultado */
+
+div {
+  /* position: absolute; */
+}
+
+.red{
+  /* z-index: 5; */
+  /* top: 50px; */
+}
+
+.blue{
+  /* z-index: 4; */
+  /* left: 50px; */
+}
+
+.yellow{
+  /* z-index: 6; */
+  /* right: -20px; */
+  /* top: 40px; */
+}
+
+
+/* Ignora los siguientes estilos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.red{
+  background-color: rgb(246, 108, 108);
+}
+
+.blue{
+  background-color: rgb(102, 102, 249);
+}
+
+.yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+Z-index y el contexto de apilamiento
+El contexto de apilamiento consiste en la superposición de capas o elementos a lo largo del eje Z del navegador. 
+Esto es importante para evitar que un elemento esté ocultando a otro.
+
+Qué son los planos y ejes
+El navegador está constituido de tres planos y ejes: el ancho o X; el alto o Y; y el de profundidad o Z.
+
+El eje X positivo está hacia la derecha; el eje Y positivo está hacia abajo; y el eje Z positivo está hacia el usuario.
+
+Estos son muy importantes para mover los elementos del HTML desde un punto inicial hacia un punto final.
+
+Qué es la propiedad z-index
+
+El contexto de apilamiento se configura con la propiedad z-index.
+
+Por defecto, todos los elementos tienen un valor auto, es decir, el orden está definido por la estructura del HTML. 
+Los primeros elementos estarán detrás y los últimos estarán de frente.
+
+Si se establece un valor positivo, este elemento se sitúa por delante de los demás. Si se establece un valor negativo, 
+se sitúa por detrás.
+
+Si un elemento tiene un z-index mayor a otro, estará por delante. Sin embargo, si un elemento que tiene un z-index menor a otros, 
+sus hijos nunca estarán por encima, aunque su z-index sea mayor.
+
+<html>
+  <div class="red">Red</div>
+<div class="blue">Blue
+  <div class="yellow">
+    Yellow (hijo de blue)
+  </div>
+</div>
+</html>
+CSS
+/* Quita los comentarios y observa el resultado */
+
+div {
+  /* position: absolute; */
+}
+
+.red{
+  /* z-index: 5; */
+  /* top: 50px; */
+}
+
+.blue{
+  /* z-index: 4; */
+  /* left: 50px; */
+}
+
+.yellow{
+  /* z-index: 6; */
+  /* right: -20px; */
+  /* top: 40px; */
+}
+
+
+/* Ignora los siguientes estilos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.red{
+  background-color: rgb(246, 108, 108);
+}
+
+.blue{
+  background-color: rgb(102, 102, 249);
+}
+
+.yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+/* Quita los comentarios y observa el resultado */
+
+div {
+  /* position: absolute; */
+}
+
+.red{
+  /* z-index: 5; */
+  /* top: 50px; */
+}
+
+.blue{
+  /* z-index: 4; */
+  /* left: 50px; */
+}
+
+.yellow{
+  /* z-index: 6; */
+  /* right: -20px; */
+  /* top: 40px; */
+}
+
+
+/* Ignora los siguientes estilos */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+
+.red{
+  background-color: rgb(246, 108, 108);
+}
+
+.blue{
+  background-color: rgb(102, 102, 249);
+}
+
+.yellow{
+  width: 150px;
+  height: 150px;
+  background-color: yellow;
+}
+
+Como puedes observar en la imagen, el elemento con la clase yellow tiene un z-index mayor a red, pero no está por encima, 
+porque su contexto de apilamiento está dentro del contexto de apilamiento del elemento blue, así mismo, nunca estará por 
+detrás de su elemento padre.
+
+            Las propiedades CSS más usadas son las siguientes, separadas en secciones comunes, algunas ya las conocemos:
+
+Display
+Margin
+Padding
+Border
+Width
+Height
+Color
+Background
+
+                            Propiedades de textos
+Las propiedades para manipular los textos y tipografía son los siguientes:
+
+font-size: establece un tamaño de fuente.
+font-weight: establece el resaltado del texto, con valores de 100 a 900 en intervalos de 100; donde 100 es delgada y 900 es negrita.
+font-family: establece el tipo de fuente.
+text-align: establece la posición del texto: right, left, center y justify.
+color: establece el color del texto.
+
+Bordes redondeados
+La propiedad que establece bordes redondeados es: border-radius.
+
+Unidades de medida
+Las unidades de medida establecen una longitud para un determinado elemento o tipografía. Existen dos tipos de medidas: absolutas y relativas.
+
+Qué son las medidas absolutas
+Las medidas absolutas son valores fijos, por lo que la medida no cambiará. La unidad absoluta más utilizada son los píxeles px, las demás son muy poco utilizadas, 
+pero es bueno que las conozcas.
+
+Unidad	Nombre	Equivalencia
+px	píxeles	1 px = 1/96 in
+cm	centímetros	1 cm = 96/2.54 px
+mm	milímetros	1 mm = 1/10 cm
+Q	cuartos de milímetros	1 Q = 1/4 mm
+in	pulgadas	1 in = 2.54 cm = 96 px
+pc	picas	1 pc = 1/6 in
+pt	puntos	1 pt = 1/72 in
+
+Qué son las medidas relativas
+Las medidas relativas son valores variables, por lo que la medida depende de un valor externo. 
+Se debe tener en cuidado con estas porque un pequeño cambio puede desencadenar tamaños muy elevados.
+
+Unidad	Depende de
+em	el elemento que lo contiene
+rem	el elemento raíz
+vw	1% del ancho de la pantalla (view width)
+vh	1% de la altura de la pantalla (view height)
+vmin	1% de la dimensión más pequeña de la pantalla
+vman	1% de la dimensión más grande de la pantalla
+ch	anchura del caracter “0” del elemento que lo contiene
+lh	altura de la línea del elemento que lo contiene
+
+Diferencia entre rem y em
+La medida em depende del elemento que lo contiene, es decir, si un elemento tiene font-size de 20px, el valor de em es igual a 20px, 
+el valor de 2em será de 40px y así sucesivamente.
+
+La medida rem depende del elemento raíz, el valor del font-size del elemento raíz es de 16px, por lo tanto, el valor de 2rem es igual a 32px, 
+y así sucesivamente.
+
+                          Diferencia entre porcentajes y la anchura y altura de la pantalla
+
+Los porcentajes representan el tamaño con respecto al total del elemento padre. Si el elemento padre tiene 20px, entonces el 100% será de 20px.
+
+Por otra parte, las medidas de anchura vw y altura vh representan el tamaño con respecto al total de la pantalla. Si el elemento tiene un tamaño de 100vw 
+será el 100 por ciento de la pantalla.
+
+Si un elemento tiene todo el tamaño de la pantalla, entonces solamente en ese punto la medida 100% será igual a 100vw o 100vh.
+
+Problema con las medidas de texto
+
+Los navegadores tienen una opción para cambiar el tamaño del texto. Con medidas absolutas, el tamaño de la letra no cambiará, por lo que será un problema para el usuario.
+
+Con medidas relativas, el tamaño cambiará con respecto a la fuente del elemento raíz. Por lo que estas son una buena opción para solucionar este problema de 
+accesibilidad, en específico la medida rem.
+
+Sin embargo, la medida rem equivale a 16px y puede ser confuso mientras utilices valores altos. 
+Por lo que vamos a cambiar el valor del elemento de la raíz para que la medida rem sea igual a 10px.
+
+En la etiqueta <html> cambia el valor de la propiedad font-size a 62.5%, resultado de una regla de tres: si 16px es igual al 100% entonces cuál será el porcentaje para 10px.
+
+html {
+  font-size: 62.5%;
+}
+
+Con este cambio, la medida rem será igual a 10px, ahora los puedes utilizar sin problema y tus textos cambiarán según las preferencias de usuario.
+
+                                                                    Responsive Design
+
+El diseño responsivo (Responsive Design) consiste en un conjunto de herramientas para que tu sitio se vea bien en varias medidas de pantalla, 
+esto incluye imágenes, tipografía, internacionalización de la página y entre otros.
+
+En la actualidad, la mayoría de sitios web son visitados desde un celular, por lo que asegurarse que nuestro sitio sea responsivo para cualquier 
+dispositivo es fundamental para optimizar las ganancias.
+
+Qué son las media queries
+Las media queries son reglas CSS que establecen un comportamiento distinto o diferentes estilos en un cierto rango de la pantalla. Esto sirve para establecer 
+el layout del sitio web para diferentes tipos de pantalla: escritorio, tablets y celulares.
+
+Estos son dos tipos de media querie :
+
+max-width / max-height: establece un rango máximo para cierto comportamiento.
+min-width / min-height: establece un rango mínimo para cierto comportamiento.
+Estos valores son parecidos a condicionales, mientras se cumpla la condición, aplica determinados estilos.
+
+Estructura de la media querie
+La estructura de una media querie consiste en empezar con @media, seguido del tipo de la media querie estableciendo un rango, 
+envolviendo las reglas CSS dentro de ese rango.
+
+@media (max-width:750px){
+  div {
+      color: red;
+  }
+  p {
+      background-color: red;
+  }
+}
+
+Herramientas del desarrollador para media queries
+Para observa
+r que los cambios se estén aplicando correctamente, las herramientas de desarrollador serán de gran ayuda.
+
+Abre las herramientas del navegador y da clic en la opción “Toggle device tool”, aquí podrás manipular la pantalla y observar en cuántos píxeles está ocurriendo
+determinados estilos.
+
+Utiliza el siguiente ejemplo para visualizar cómo cambian los estilos según la longitud de la pantalla. Puedes revisar la media querie que está en el código. 
+Aunque solo cambien el color de dos elementos, puede estar cualquier propiedad que desees, prueba con todo.
+<html>
+  <div class="card1"></div>
+<div class="card2"></div>
+</html>
+CSS
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.card1{
+  width: 100%;
+  height: 25%;
+  background-color: brown;
+}
+
+.card2 {
+  width: 50%;
+  height: 75%;
+  background-color: chartreuse;
+}
+
+@media (min-width: 500px){
+  .card1 {
+      background-color: chartreuse;
+  }
+
+  .card2 {
+    background-color: brown;
+  }
+}
+
+
+
+@mixin breakpoint($width) {
+	@media (min-width: $width) {
+            @content;
+        }
+  }
+
+  ¿Qué son las arquitecturas CSS? ¿Para qué sirven?
+Las arquitecturas CSS consisten en manejar el código CSS con una serie de reglas y patrones para facilitar su lectura, mantenibilidad y escabilidad.
+El código que has manejado no se asemeja a la realidad, pues deberás manejar varios cientos o miles de líneas de código. 
+Las arquitecturas CSS se encargan de manejar una norma en el código para que cualquiera pueda añadir o quitar funcionalidad sin mucho trabajo.
+
+Objetivos de las arquitecturas de CSS
+Los objetivos de las arquitecturas de CSS son:
+
+Ser predecible: el código debe ser lo menos complejo posible.
+Reutilizable: el código debe ser lo menos redundante, para evitar problemas con la especificidad.
+Mantenible: el código debe ser lo más fácil de manejar para añadir o quitar estilos.
+Escalable: el código debe ser capaz de crecer.
+Buenas prácticas de las arquitecturas de CSS
+Las buenas prácticas de las arquitecturas de CSS son:
+
+Lineamientos y estándares: definir normas en tu grupo de trabajo de cómo estará escrito el código.
+Documentación: establecer una breve explicación del código y de los lineamientos, esto sirve especialmente para nuevas personas se familiaricen con lo que deben hacer.
+Componentes: establecer de manera componetizada cada uno de los elementos de tu página, es decir, manejarlos por partes para después unirlos en un todo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

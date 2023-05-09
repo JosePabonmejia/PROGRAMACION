@@ -481,7 +481,7 @@ function get_pokemon (){
             echo "Bullbasur";
             break;
         default:
-            echo "Lo hay pokemon para ti";
+            echo "No hay pokemon para ti";
     }
 }
 get_pokemon();//Invocamos a la funcion
@@ -508,3 +508,121 @@ function FuncionAprobacion($notas){
 $Introduce=readline("Introduce tu nota: ");
 FuncionAprobacion($Introduce);
 echo "\n";
+                                ///Parametros a profundidad
+Suma infinita   
+Suma infinita   
+...trasforma un array en parametro
+tenemos un array con 4 numeros que se convierten en la variable $params
+<?php
+function suma_infinita(...$params){
+    $suma=0;
+    foreach ($params as $numero) {
+        $suma += $numero;
+    }
+  echo "La sumatoria es: ".$suma;
+};
+
+suma_infinita(1,2,3,4);
+                                                ///RETURN
+Una instrucción return termina la ejecución de una función y devuelve el control a la función de 
+llamada. La ejecución se reanuda en la función de llamada, en el punto que sigue inmediatamente a 
+la llamada.
+<?php
+function message (){
+$aleatoreo =rand(1,4);
+$frase = "";
+switch ($aleatoreo) 
+    {
+        case '1':
+            $frase = "No te rindas \n";
+            break;
+        
+        case '2':
+            $frase = "No me jodas \n";
+            break;
+        
+        case '3':
+            $frase = "Gana plata \n";
+            break;
+        
+        case '4':
+            $frase = "No te cases \n";
+            break;
+        
+        default:
+            # code...
+            break;
+    }
+    return $frase;
+}
+echo message();
+echo "\n";
+                                                ///RETURN
+Una instrucción return termina la ejecución de una función y devuelve el control a la función de 
+llamada. La ejecución se reanuda en la función de llamada, en el punto que sigue inmediatamente a 
+la llamada.
+<?php
+function message (){
+$aleatoreo =rand(1,4);
+$frase = "";
+switch ($aleatoreo) 
+    {
+        case '1':
+            $frase = "No te rindas \n";
+            break;
+        
+        case '2':
+            $frase = "No me jodas \n";
+            break;
+        
+        case '3':
+            $frase = "Gana plata \n";
+            break;
+        
+        case '4':
+            $frase = "No te cases \n";
+            break;
+        
+        default:
+            # code...
+            break;
+    }
+    return $frase;
+}
+echo message();
+echo "\n";
+                                            ///RETURN
+Una instrucción return termina la ejecución de una función y devuelve el control a la función de 
+llamada. La ejecución se reanuda en la función de llamada, en el punto que sigue inmediatamente a 
+la llamada.
+<?php
+function message (){
+$aleatoreo =rand(1,4);
+$frase = "";
+switch ($aleatoreo) 
+    {
+        case '1':
+            $frase = "No te rindas \n";
+            break;
+        
+        case '2':
+            $frase = "No me jodas \n";
+            break;
+        
+        case '3':
+            $frase = "Gana plata \n";
+            break;
+        
+        case '4':
+            $frase = "No te cases \n";
+            break;
+        
+        default:
+            # code...
+            break;
+    }
+    return $frase;
+}
+echo message();
+echo "\n";
+

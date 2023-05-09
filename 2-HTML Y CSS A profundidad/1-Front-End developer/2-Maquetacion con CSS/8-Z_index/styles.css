@@ -1,0 +1,52 @@
+/* Quita los comentarios y observa el resultado */
+
+div {
+    /* position: absolute; */
+  }
+  
+  .red{
+    /* z-index: 5; */
+    /* top: 50px; */
+  }
+  
+  .blue{
+    /* z-index: 4; */
+    /* left: 50px; */
+  }
+  
+  .yellow{
+    /* z-index: 6; */
+    /* right: -20px; */
+    /* top: 40px; */
+  }
+  
+  
+  /* Ignora los siguientes estilos */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+  }
+  
+  div {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .red{
+    background-color: rgb(246, 108, 108);
+  }
+  
+  .blue{
+    background-color: rgb(102, 102, 249);
+  }
+  
+  .yellow{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+  }
+  
+  
