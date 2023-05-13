@@ -1,0 +1,144 @@
+¿Qué es la terminal?
+Si alguna vez viste una película de hackers, seguro has visto la ventana negra que abren en sus computadores, dónde escriben 
+muchas letras sin sentido. Esto se conoce como terminal, pero, te lo explicaremos más a detalle.
+
+¿Qué es la terminal?
+La terminal es un programa que ejecuta líneas de comandos, que a su vez estas líneas de comando ejecutan acciones y aquí tienes 
+que aprender dos conceptos: terminal y shell.
+
+Concepto de terminal
+Estamos muy acostumbrados a que en nuestra computadora inicie un sistema operativo que tenga un sistema de ventanas en el que 
+podemos abrir carpetas y programas y podamos mover archivos a través de una interfaz gráfica.
+
+La terminal es otra ventana más, es un programa, una interfaz que recibe un comando para luego pasárselo a la shell y que esta 
+última la ejecute. Con este programa podemos hacer todo lo que el sistema de carpetas e interfaz gráfica del sistema operativo 
+puede hacer, pero utilizando comandos.
+
+Te explicamos: qué es un comando.
+
+Concepto de shell
+Ahora la terminal no ejecuta líneas de código, solo la recibe, es la shell quien hace todo el proceso de tomar el comando, 
+ir con el procesador y la memoria RAM y decirles "tomen, ejecuten esto".
+
+Si lo pensamos de potra forma, la shell nos proporciona una forma de comunicarnos con el procesador y la RAM sin tener que pasar 
+por la interfaz gráfica.
+
+¿Por qué usar la shell y no la interfaz gráfica?
+Al final del día, la interfaz gráfica, como lo es el sistema de ventanas, es un programa más y como programa que se ocupa espacio 
+en la memoria. De hecho, si estás en Windows 10 y abres el administrador de tareas en la pestaña Procesos, en el grupo Procesos de 
+Windows, encontrarás uno llamado Explorador de Windows.
+
+Este programa no es todo el sistema de ventanas, pero si es todo el sistema de ficheros y como podemos ver ocupa espacio en CPU y 
+en memoria RAM.
+
+La terminal es mucho menos pesada que el sistema de ventanas y el sistema de ficheros porque te comunicas directamente con los 
+recursos del sistema operativo sin pasar por la interfaz gráfica.
+
+Además, hay casos en los que no cuentas con una interfaz gráfica o también puede dañarse y tendrás que resolver utilizando la 
+terminal de comandos.
+
+NOTA: Para este curso necesitarás estar usando un sistema operativo basado en linux o tener instalado Windows Subsystem for 
+Linux en windows.
+
+Si no sabes como instalarlo, en el Curso de Prework en Windows tienes más detalles.
+
+Aprendiendo a caminar en la terminal
+
+En los sistemas operativos organizamos los archivos en una estructura de carpetas en forma de árbol jerárquico. Este árbol cambia dependiendo de los diferentes sistemas operativos (no tanto en Linux y Mac).
+
+Cómo funciona el sistema de carpetas
+El sistema operativo con el que trabajaremos es Linux, por lo tanto usaremos su estructura. Observa el siguiente esquema:
+
+La carpeta con el símbolo “/” es la raíz, ahí es donde comienza todo el sistema de ficheros (el equivalente en Windows podría ser el fichero “C:\”). Dentro de esta carpeta hay varios ficheros, el que nos importa en este momento es el “Home”.
+
+La carpeta “Home” contiene una carpeta por cada usuario del sistema y ya dentro de cada una de estas carpetas, estarán las carpetas que conocemos de toda la vida como imágenes, documentos, música, etc.
+
+Cómo entender la información al inicio de la terminal
+Cuando abrimos la terminal vamos a ver algo como esto:
+
+miguelangel@DESKTOP-3R804MK:~$
+
+Todo esto parece un mensaje encriptado, pero es más sencillo de lo que parece, vamos por partes:
+
+miguelangel es el nombre del usuario que está activo. En tu caso aparecerá el nombre del usuario que esté activo en tu computadora.
+DESKTOP-3R804MK es el nombre que el sistema operativo le dio a la computadora. En este caso se usa Windows y ese es el nombre que en la instalación Windows le asignó al dispositivo. Si usas Linux aparecerá el nombre del PC que hayas colocado en la instalación.
+~ es la carpeta en la que te encuentras y ahora es cuando empiezan las confusiones porque en el esquema no estaba una carpeta con ese símbolo. Más adelante verás como todo tiene sentido.
+Por último, $ significa que somos un usuario normal y no un root o un superusuario. Más adelante hablaremos más acerca de esto.
+Tu primer comando (pwd)
+Ahora sí, vamos con el poderosísimo comando que te ayudará a descubrir algo muy importante: ¿dónde estás?
+
+Vimos que el símbolo ~ indica la carpeta donde te encuentras, ¿cuál es esa carpeta? Para saberlo escribe el siguiente comando:pwd
+Te debió haber aparecido algo como esto: /home/miguelangel
+
+El comando pwd, significa Print Working Directory y te muestra el directorio en el que te encuentras. En este caso dice que estoy en el home del usuario que es miguelangel.
+
+Usar el comando Change Directory (cd)
+No trabajarás todo desde la misma carpeta, así que necesitas saber como moverte entre carpetas sin salir de la terminal. Para eso usamos el comando cd que significa Change Directory.
+
+Para usarlo escribimos cd seguido del directorio al que queremos movernos, por ejemplo, dentro del home tengo la carpeta Documents, así que para moverme ahí escribo: cd Documents
+El comando pwd, significa Print Working Directory y te muestra el directorio en el que te encuentras. En este caso dice que estoy en el home del usuario que es miguelangel.
+
+Usar el comando Change Directory (cd)
+No trabajarás todo desde la misma carpeta, así que necesitas saber como moverte entre carpetas sin salir de la terminal. Para eso usamos el comando cd que significa Change Directory.
+
+Para usarlo escribimos cd seguido del directorio al que queremos movernos, por ejemplo, dentro del home tengo la carpeta Documents, así que para moverme ahí escribo:
+miguelangel@DESKTOP-3R804MK:~/Documents$
+
+Atajos
+Virgulilla (~)
+De seguro te preguntarás porqué la virgulilla (~) indica la carpeta del usuario en el home, ¿cuál es la utilidad? Supongamos que estamos navegando por diferentes carpetas y nos encontramos en la siguiente dirección:
+miguelangel@DESKTOP-3R804MK:/mnt/c/users/migue/development$
+
+(Si estás usando WSL, eso significa que estás buscando entre carpetas que están en Windows)
+
+Si ahora quieres volver al home habría que escribir el siguiente comando:
+
+cd /home/miguelangel
+Pero puedes mejor escribir:
+
+cd ~ 
+Y llegas más rápido.
+
+Punto y doble punto (.) (…)
+No siempre quieres ir hacia adelante, a veces necesitas devolverte, para eso utilizas el atajo del doble punto (…) que te envía a la carpeta que está atrás. Si haces esto:
+
+miguelangel@DESKTOP-3R804MK:~$ cd ..
+Como estás en la carpeta del usuario, pasarás a estar en la carpeta de home.
+
+Por otro lado, el punto (.) índica la carpeta actual, así puedes hacer direcciones más precisas como esta:
+
+miguelangel@DESKTOP-3R804MK:/home$ cd ./miguelangel/Documents/
+Slash (/)
+Por último, el atajo slash te lleva a la raíz donde están todas las carpetas del sistema operativo.
+
+miguelangel@DESKTOP-3R804MK:/mnt/c/users/migue$ cd /
+miguelangel@DESKTOP-3R804MK:/$
+¿Cómo saber lo que hay adentro de las carpetas? (ls)
+No siempre vas a saber lo que hay adentro de las carpetas, por lo que necesitas listar lo que hay dentro, para eso está el comando ls, por lo general le dan el significado de List.
+
+Si ejecutamos el comando ls veremos las carpetas y archivos que hay dentro:
+
+image.png
+Como puedes ver, cada nombre tiene un color diferente. Para este caso el azul oscuro es para las carpetas y el claro es para los archivos, esto dependerá de la paleta de colores que tenga tu terminal.
+
+Pero, ¿qué tal si queremos conocer más información? Para saber información adicional como la fecha de creación, el peso, los permisos, etc., utilizamos la opción -l que significa Long:
+
+image.png
+Ahora nos muestra una tabla que tiene mucha información que estaremos viendo más adelante, pero céntrate en la quinta columna, esos números son el peso, pero el peso en bytes, lo cual lo hace un poco complicado de leer. Podemos añadir la opción -h que significa Human Readable:
+
+Sin título.png
+Nota: para añadir más de una opción no hacemos esto ls -l -h sino esto ls -lh
+
+Uso del comando file
+Con el comando ls podemos listar los elementos dentro de una carpeta, pero a veces no sabemos si es una archivo o si es una carpeta o lo que sea.
+
+Para eso tenemos el comando file que te da información acerca del tipo de elemento que hayas seleccionado:
+
+image.png
+En este caso vemos que el comando file nos dice que “dev” es un directorio y “lib” es un enlace simbólico.
+
+Comando	Función
+pwd	Print Working Directory Muestra en la carpeta en la que estas
+cd	Change Directory Te mueve a la carpeta que desees
+ls	List Lista los archivos y carpetas dentro del directorio que selecciones
+file	Muestra la información del archivo que selecciones

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Quicksand:wght@300;500;700&display=swap');
+:root{/* Creamos variables de la paleta de colores eetc */
+    --font: ;
+    --Very-light-pink:#C7C7C7;
+    --Text-input-field:#F7F7F7;  
+    --Hospital-green:#ACD9B2;
+    --White:#FFFFFF;
+    --Black:#000000;
+    --Dark:#232830;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+    font-family: 'Quicksand', sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.log{
+    color: rgba(245, 245, 245, 0.684);
+    background-color: #000000;
+    text-align: center;
+}
+.login{
+    background-color: #232830;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background: rgb(2,0,36);
+background: linear-gradient(258deg, rgba(2,0,36,1) 0%, rgba(121,9,27,1) 44%, rgba(0,212,255,1) 100%);
+}
+.login_container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 330px;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: solid black 3px;
+    padding: 8px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    width: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-self: center;
+  
+}
+.title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.label{
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+.input{
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 3px solid black;
+    border-radius: 5px;
+    height:30px ;
+    margin-top: 5px;
+}
+.button_newpassword{
+    background-color: black;
+    color: white;
+    margin-top: 5px;
+    height: 20px;  
+    border-radius: 5px;
+    border: none;
+}

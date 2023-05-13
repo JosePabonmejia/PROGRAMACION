@@ -1,0 +1,10 @@
+
+Comando	Función
+$pwd	Print Working Directory Muestra en la carpeta en la que estas
+$cd	Change Directory Te mueve a la carpeta que desees
+$ls	List Lista los archivos y carpetas dentro del directorio que selecciones
+$file	Muestra la información del archivo que selecciones
+$rm -r Elimina archivos 
+$less texto.txt Abre un archivo cualquiera, dentro de less podemos buscar con el (\) palabras etc
+
+

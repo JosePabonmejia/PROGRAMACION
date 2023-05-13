@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Quicksand:wght@300;500;700&display=swap');
+:root{/* Creamos variables de la paleta de colores eetc */
+    --font: ;
+    --Very-light-pink:#C7C7C7;
+    --Text-input-field:#F7F7F7;  
+    --Hospital-green:#ACD9B2;
+    --White:#FFFFFF;
+    --Black:#000000;
+    --Dark:#232830;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+
+}
+.email{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.email_container{
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto auto 20px;
+    place-items: center;
+}
+.logo{
+    width: 150px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-self: center; 
+    display: none;
+}
+.title{
+    font-size:var(--lg) ;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.parrafo{
+    color: var(--Very-light-pink);
+    font-size: var(--md);
+    font-weight: 1rem;
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+}
+.picture{
+    border-radius: 50%;
+    background-color:#F7F7F7;
+    height: 140px;
+    width: 140px;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.email_image{
+   height: 90px;
+   width: 90px;
+}
+.login{
+    width: 300px;
+    height: 45px;
+    color: white;
+    background-color: #ACD9B2;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.parrafo1{
+    color: var(--Very-light-pink);
+}
+.parrafo1 a{
+    text-decoration: none;
+    color:var(--Hospital-green);
+}
+@media (max-width:640px) {
+    .logo{
+        display: block;
+    }
+}
+
+
