@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Quicksand:wght@300;500;700&display=swap');
+:root{/* Creamos variables de la paleta de colores eetc */
+    --font: 'Quicksand', sans-serif;
+    --Very-light-pink:#C7C7C7;
+    --Text-input-field:#F7F7F7;  
+    --Hospital-green:#ACD9B2;
+    --White:#FFFFFF;
+    --Black:#000000;
+    --Dark:#232830;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:var(--font);  
+}
+.menu{
+    display: none;
+}
+.logo{
+    width: 100px;
+    margin-right: 40px;
+    
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+    
+
+}
+.navbar-left  {
+    display: flex;  
+}
+.navbar-left ul li{
+    margin: 0 20px;
+}
+.navbar-right ul li{
+    margin: 0 10px;
+}
+.navbar-left ul,.navbar-right ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.navbar-left ul li a{
+    text-decoration: none;
+    color: var(--Very-light-pink);
+}
+.navbar-shopping-card{
+    position: relative;
+}
+.navbar-shopping-card div{
+    position: absolute;
+    left: 14px;
+    bottom: 20px;
+    width: 13px;
+    height: 13px;
+    background-color: var(--Hospital-green);
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+.navbar-left ul li a:hover,.navbar-right ul li a:hover{
+    color: var(--Hospital-green);
+    color: #ACD9B2;
+    border: solid 1px var(--Hospital-green);
+    border-radius: 8px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    
+}
+
+@media(max-width:640px){
+    .menu{
+        display: block;
+    }
+    .navbar-left ul{
+        display: none;
+    }
+    
+    
+}

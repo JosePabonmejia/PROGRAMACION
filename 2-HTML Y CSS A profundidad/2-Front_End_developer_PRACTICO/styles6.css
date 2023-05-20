@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Quicksand:wght@300;500;700&display=swap');
+:root{/* Creamos variables de la paleta de colores eetc */
+    --font: ;
+    --Very-light-pink:#C7C7C7;
+    --Text-input-field:#F7F7F7;  
+    --Hospital-green:#ACD9B2;
+    --White:#FFFFFF;
+    --Black:#000000;
+    --Dark:#232830;
+    --sm:14px;
+    --md:16px;
+    --lg:18px;
+    --card:240px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;  
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,var(--card));
+    gap:26px;
+    place-content: center;
+
+}
+.card-product{
+    width: var(--card);
+    box-sizing: border-box;
+    
+}
+.img-product{
+    border-radius: 15px;
+    height: 240px;
+    width: 240px;
+    object-fit: cover;
+}
+.product-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-info div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.product-info div p:nth-child(2){
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color:var(--Very-light-pink);
+}
+
+
+@media (max-width:640px) {
+    .card-container{
+        grid-template-columns: repeat(auto-fill,140px);
+    }
+    .card-product{
+        width: 140px;
+    }
+    .img-product{
+        width: 140px;
+        height: 140px;
+    }
+
+}
